@@ -1,11 +1,10 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "motion/react"
 
 export default function EnhancedHero() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-//   const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -23,7 +22,7 @@ export default function EnhancedHero() {
     window.addEventListener("resize", setCanvasSize)
 
     const particles: Particle[] = []
-    const particleCount = 200 // Increased particle count for more visual interest
+    const particleCount = 150 // Increased particle count for more visual interest
 
     class Particle {
       x: number
@@ -33,8 +32,8 @@ export default function EnhancedHero() {
       color: string
 
       constructor() {
-        this.x = Math.random() * canvas.width
-        this.y = Math.random() * canvas.height
+        this.x = Math.random() * (canvas?.width || 0)
+        this.y = Math.random() * (canvas?.height || 0)
         this.speed = 0.1 + Math.random() * 0.4
         this.size = 1 + Math.random() * 3
         this.color = `hsl(${Math.random() * 60 + 180}, 100%, ${50 + Math.random() * 50}%)`
@@ -43,8 +42,8 @@ export default function EnhancedHero() {
       update() {
         this.y -= this.speed
         if (this.y < 0) {
-          this.y = canvas.height
-          this.x = Math.random() * canvas.width
+          this.y = (canvas?.height || 0)
+          this.x = Math.random() * (canvas?.width || 0)
         }
       }
 
