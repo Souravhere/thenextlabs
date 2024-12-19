@@ -1,4 +1,4 @@
-import EnhancedHero from "./component/enhanced-hero";
+import EnhancedHero from "../component/enhanced-hero";
 
 export default function Home() {
   return (
