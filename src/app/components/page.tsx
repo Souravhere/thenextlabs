@@ -1,9 +1,16 @@
-import IndexHero from '@/src/components/Indexhero'
+import Link from 'next/link'
 import React from 'react'
 
 function page() {
   return (
-    <IndexHero/>
+    <div className='w-full h-screen bg-transparent'>
+        <div>
+            <h1>Components by the The Next Labs</h1>
+            <Link href='/componets/Particles-Effect-Hero'>
+                Particles Effet Hero
+            </Link>
+        </div>
+    </div>
   )
 }
 
