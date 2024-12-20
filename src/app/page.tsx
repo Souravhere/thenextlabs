@@ -1,9 +1,8 @@
-import EnhancedHero from "../components/componentcodes/enhanced-hero";
+
+import IndexHero from "../components/Indexhero";
 
 export default function Home() {
   return (
-    <div className="">
-       <h1>soon</h1>
-    </div>
+    <IndexHero />
   );
 }
