@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-function page() {
+function comppage() {
   return (
     <div className='w-full h-screen bg-transparent'>
         <div>
@@ -14,4 +14,4 @@ function page() {
   )
 }
 
-export default page
+export default comppage
