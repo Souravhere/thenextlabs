@@ -4,15 +4,19 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Sparkles } from 'lucide-react'
 import { MeshGradient } from './ui/mesh-gradient'
 import { AnimatedButton } from './ui/animated-button'
+import { Spotlight } from './ui/spotlight'
 
 export const Hero = () => {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-      {/* Background Elements */}
-      <MeshGradient />
+    {/* Background Elements */}
+        <Spotlight
+          className="absolute top-0 left-0 md:left-10 md:top-10"
+          fill="white"
+        />
+        <MeshGradient />
 
-
-      {/* Main Content */}
+        {/* Main Content */}
       <div className="container w-full mx-auto text-center relative">
         <motion.div
           initial={{ opacity: 0 }}
