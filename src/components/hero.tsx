@@ -15,44 +15,42 @@ export const Hero = () => {
       <Spotlight className="-top-40 -left-40" />
       <Spotlight className="-top-40 -right-40" />
 
-      {/* Top Banner */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, type: "spring" }}
-        className="absolute top-6 left-1/2 -translate-x-1/2"
-      >
-        <motion.div
-          whileHover={{ scale: 1.02 }}
-          className="flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-muted/50 to-muted/20 backdrop-blur-sm border border-muted/20 shadow-lg shadow-black/10"
-        >
-          <Sparkles className="w-4 h-4 text-secondary" />
-          <span className="text-sm font-medium bg-gradient-to-r from-foreground/90 to-foreground/70 bg-clip-text text-transparent">
-            Keep more of what you earn. 0% fees until product-market fit
-          </span>
-          <ArrowRight className="w-4 h-4 text-foreground/70" />
-        </motion.div>
-      </motion.div>
 
       {/* Main Content */}
-      <div className="container px-4 mx-auto text-center">
+      <div className="container w-full mx-auto text-center relative">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="space-y-8"
+          className="space-y-8 text-center"
         >
+      {/* Top Banner */}
+    <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, type: "spring" }}
+        className="absolute -top-6 transform px-3 md:px-0 w-full flex justify-center items-center"
+    >
+        <motion.div
+            whileHover={{ scale: 1.02 }}
+            className="flex items-center gap-3 px-4 py-2 md:px-6 md:py-3 rounded-full bg-gradient-to-r from-muted/50 to-muted/20 backdrop-blur-sm border border-muted/20 shadow-lg shadow-black/10"
+        >
+            <Sparkles className="w-4 h-4 text-secondary" />
+            <span className="text-xs md:text-sm font-medium bg-gradient-to-r from-foreground/90 to-foreground/70 bg-clip-text text-transparent">
+                Transforming Ideas Into Animated Experiences
+            </span>
+            <ArrowRight className="w-4 h-4 text-foreground/70" />
+        </motion.div>
+    </motion.div>
           {/* Heading */}
-          <div className="space-y-4">
-            <AnimatedText
-              text="The Next Labs for"
-              className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight"
-            />
-            <AnimatedText
-              text="Modern Websites"
-              className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight"
-              gradient
-            />
+          <div className="space-y-4 text-center">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight relative">
+              The Next Labs for
+              <br />
+              <span className="bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text text-transparent">
+                Modern Websites
+              </span>
+            </h1>
           </div>
 
           {/* Description */}
