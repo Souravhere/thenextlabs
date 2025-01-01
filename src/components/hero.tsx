@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Sparkles } from 'lucide-react'
 import { MeshGradient } from './ui/mesh-gradient'
 import { Spotlight } from './ui/spotlight'
-import { AnimatedText } from './ui/animated-text'
+// import { AnimatedText } from './ui/animated-text'
 import { AnimatedButton } from './ui/animated-button'
 
 export const Hero = () => {
@@ -12,8 +12,8 @@ export const Hero = () => {
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
       {/* Background Elements */}
       <MeshGradient />
-      <Spotlight className="-top-40 -left-40" />
-      <Spotlight className="-top-40 -right-40" />
+      <Spotlight className="-top-40 -left-40 z-10" />
+      <Spotlight className="-top-40 -right-40 z-10" />
 
 
       {/* Main Content */}
@@ -101,7 +101,7 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.1, duration: 0.8 }}
-            className="flex flex-wrap gap-6 justify-center"
+            className="flex flex-wrap gap-6 justify-center px-2"
           >
             <AnimatedButton href="#get-started" variant="primary">
               Get started for free <Sparkles className="w-4 h-4" />

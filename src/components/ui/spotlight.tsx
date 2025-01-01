@@ -24,15 +24,15 @@ export const Spotlight = ({ className = '' }: { className?: string }) => {
       animate={{ 
         opacity: [0.5, 0.6, 0.5],
         scale: [0.8, 1, 0.8],
-        x: mousePosition.x * 0.05,
-        y: mousePosition.y * 0.05,
+        x: mousePosition.x - 400,
+        y: mousePosition.y - 400,
       }}
       transition={{ 
         duration: 4,
         repeat: Infinity,
         repeatType: "reverse",
       }}
-      className={`absolute w-[800px] h-[800px] bg-gradient-radial from-primary/30 via-primary/10 to-transparent rounded-full blur-[100px] -z-10 ${className}`}
+      className={`absolute w-[800px] h-[800px] bg-gradient-radial from-primary/30 via-primary/10 to-transparent rounded-full blur-[100px] ${className}`}
     >
       <motion.div
         animate={{ 
