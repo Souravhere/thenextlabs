@@ -3,19 +3,43 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: 17 24 39; /* Gray-900 */
+  --foreground: 243 244 246; /* Gray-100 */
+  --card: 31 41 55; /* Gray-800 */
+  --card-foreground: 243 244 246; /* Gray-100 */
+  --popover: 31 41 55; /* Gray-800 */
+  --popover-foreground: 243 244 246; /* Gray-100 */
+  --primary: 129 140 248; /* Indigo-400 */
+  --primary-foreground: 17 24 39; /* Gray-900 */
+  --secondary: 249 168 212; /* Pink-300 */
+  --secondary-foreground: 17 24 39; /* Gray-900 */
+  --muted: 55 65 81; /* Gray-700 */
+  --muted-foreground: 156 163 175; /* Gray-400 */
+  --accent: 139 92 246; /* Purple-500 */
+  --accent-foreground: 243 244 246; /* Gray-100 */
+  --destructive: 248 113 113; /* Red-400 */
+  --destructive-foreground: 17 24 39; /* Gray-900 */
+  --border: 55 65 81; /* Gray-700 */
+  --input: 55 65 81; /* Gray-700 */
+  --ring: 129 140 248; /* Indigo-400 */
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-background text-foreground;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
