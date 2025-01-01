@@ -41,7 +41,14 @@ export const Hero = () => {
           {/* Heading */}
           <div className="space-y-4 text-center">
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight relative">
-              The Next Labs for
+              <span className="relative">
+                <span className="absolute inset-0 text-white opacity-30 blur-lg">
+                  The Next Labs for
+                </span>
+                <span className="relative">
+                  The Next Labs for
+                </span>
+              </span>
               <br />
               <span className="bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text text-transparent">
                 Modern Websites
@@ -73,7 +80,7 @@ export const Hero = () => {
               transition={{ delay: 0.9, duration: 1 }}
               className="relative"
             >
-              <span className="relative text-xl font-semibold bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text text-transparent">
+              <span className="relative text-xl font-semibold bg-primary bg-clip-text text-transparent">
                 Zero Compromises.
               </span>
               <motion.span
