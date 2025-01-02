@@ -8,6 +8,9 @@ import { AnimatedButton } from './ui/animated-button'
 import { NewSpotlight } from './ui/NewSpotlight'
 
 export const Hero = () => {
+    function clsx(...classes: (string | undefined)[]): string {
+        return classes.filter(Boolean).join(' ');
+    }
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
     {/* Background Elements */}
@@ -49,9 +52,9 @@ export const Hero = () => {
     </motion.div>
           {/* Heading */}
           <div className="space-y-4 text-center">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight relative">
+            <h1 className="text-5xl md:text-8xl lg:text-9xl font-bold tracking-tight relative">
               <span className="relative">
-                <span className="absolute inset-0 text-white opacity-30 blur-lg">
+                <span className={clsx("sm:absolute hidden inset-0 text-white opacity-30 blur-lg", "glow-effect")}>
                   The Next Labs for
                 </span>
                 <span className="relative">
@@ -66,7 +69,7 @@ export const Hero = () => {
           </div>
 
           {/* Description */}
-          <div className="space-y-4 max-w-3xl mx-auto px-3">
+          <div className="space-y-4 max-w-3xl mx-auto p-6">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -76,13 +79,39 @@ export const Hero = () => {
               Crafting animated websites for cutting-edge industries
             </motion.p>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.8 }}
-              className="text-lg text-foreground/60"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 0.8 }}
+                className="text-lg text-foreground/60"
             >
-              Custom development from scratch using Next.js and React.js
+                Custom development from scratch using
             </motion.p>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.7, duration: 0.8 }}
+                    className="flex items-center gap-5 justify-center"
+                >
+                    <span className="text-foreground flex items-center gap-2 bg-background p-2 px-3 rounded-full">
+                        <motion.img
+                            src="/icons/nextjs-icon.svg"
+                            alt="Next.js"
+                            className="w-4 h-4"
+                            whileHover={{ scale: 1.1 }}
+                        />
+                        Next.js
+                    </span>{' '}
+                    and{' '}
+                    <span className="text-foreground flex items-center gap-2 bg-background p-2 px-3 rounded-full">
+                        <motion.img
+                            src="/icons/reactjs-icon.svg"
+                            alt="React.js"
+                            className="w-4 h-4"
+                            whileHover={{ scale: 1.1 }}
+                        />
+                        React.js
+                    </span>
+                </motion.div>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
