@@ -8,9 +8,6 @@ import { AnimatedButton } from './ui/animated-button'
 import { NewSpotlight } from './ui/NewSpotlight'
 
 export const Hero = () => {
-    function clsx(...classes: (string | undefined)[]): string {
-        return classes.filter(Boolean).join(' ');
-    }
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
     {/* Background Elements */}
@@ -54,12 +51,8 @@ export const Hero = () => {
           <div className="space-y-4 text-center">
             <h1 className="text-5xl md:text-8xl lg:text-9xl font-bold tracking-tight relative">
               <span className="relative">
-                <span className={clsx("sm:absolute hidden inset-0 text-white opacity-30 blur-lg", "glow-effect")}>
-                  The Next Labs for
-                </span>
-                <span className="relative">
-                  The Next Labs for
-                </span>
+                  <span className="relative z-10">The Next Labs for</span>
+                  <span className="absolute inset-0 blur-3xl opacity-25 bg-gradient-to-r from-secondary via-accent to-primary"></span>
               </span>
               <br />
               <span className="bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text text-transparent">
