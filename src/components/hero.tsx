@@ -5,14 +5,19 @@ import { ArrowRight, Sparkles } from 'lucide-react'
 import { MeshGradient } from './ui/mesh-gradient'
 import { AnimatedButton } from './ui/animated-button'
 import { Spotlight } from './ui/spotlight'
+import { NewSpotlight } from './ui/NewSpotlight'
 
 export const Hero = () => {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
     {/* Background Elements */}
-        <Spotlight
-          className="absolute top-0 left-0 md:left-10 md:top-10"
-          fill="white"
+        <NewSpotlight
+            className="-top-40 left-0 md:left-60 md:-top-20"
+            fill="white"
+        />
+        <NewSpotlight
+            className="-top-40 left-0 md:left-60 md:-top-20"
+            fill="white"
         />
         <MeshGradient />
 

@@ -24,7 +24,7 @@ export const AnimatedButton = ({
       className={`
         relative px-8 py-3 rounded-full font-medium transition-all duration-300
         ${variant === 'primary' 
-          ? 'bg-gradient-to-r from-primary via-accent to-secondary text-primary-foreground shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30' 
+          ? 'bg-gradient-to-r from-primary via-accent to-secondary font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 text-foreground'  
           : 'bg-muted/50 hover:bg-muted/70 text-foreground backdrop-blur-sm border border-muted/20'
         }
         ${className}
