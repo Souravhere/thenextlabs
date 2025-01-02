@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
       <Hero/>
-      <div className="w-full h-screen"></div>
+      {/* <div className="w-full h-screen"></div> */}
     </div>
   );
 }
