@@ -6,11 +6,12 @@ import { MeshGradient } from './ui/mesh-gradient'
 import { AnimatedButton } from './ui/animated-button'
 // import { Spotlight } from './ui/spotlight'
 import { NewSpotlight } from './ui/NewSpotlight'
+import Image from 'next/image'
 
 export const Hero = () => {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-    {/* Background Elements */}
+   { /* Background Elements */}
         <NewSpotlight
             className="-top-40 left-0 md:left-60 md:-top-20"
             fill="white"
@@ -20,6 +21,8 @@ export const Hero = () => {
             fill="white"
         />
         <MeshGradient />
+        <Image src='/assets/left-image.svg' alt='men working on the pc' width={400} height={400} className='absolute bottom-0 left-0 hidden md:block'/>
+        <Image src='/assets/right-image.svg' alt='men working on the pc' width={400} height={400} className='absolute bottom-0 right-0 hidden md:block'/>
 
         {/* Main Content */}
       <div className="container w-full mx-auto text-center relative">
