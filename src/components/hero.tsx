@@ -20,8 +20,6 @@ export const Hero = () => {
             fill="white"
         />
         <MeshGradient />
-        <Image src='/assets/left-image.svg' alt='men working on the pc' width={400} height={400} className='absolute bottom-0 left-0 hidden md:block'/>
-        <Image src='/assets/right-image.svg' alt='men working on the pc' width={400} height={400} className='absolute bottom-0 right-0 hidden md:block'/>
 
         {/* Main Content */}
       <div className="container w-full mx-auto text-center relative">
