@@ -2,12 +2,13 @@
 
 import { motion } from 'framer-motion'
 import { ServiceCard } from './ui/service-card'
+import { MeshGradient } from './ui/mesh-gradient'
 
 const services = [
   {
     title: "Landing Pages for SaaS",
     description: "High-performing, visually engaging landing pages that convert visitors into customers.",
-    image: "/assets/sass.png"
+    image: "/assets/sass.svg"
   },
   {
     title: "Crypto & Web3 Platforms",
@@ -23,8 +24,8 @@ const services = [
 
 export const ServicesGrid = () => {
   return (
-    <section className="py-20 relative overflow-hidden">
-      
+    <section className="py-16 relative overflow-hidden">
+      <MeshGradient/>
       <div className="container px-4 mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
