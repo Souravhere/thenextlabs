@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { type LucideIcon } from 'lucide-react'
-import { MeshPattern2, MeshPattern3 } from './svg-patterns'
+import { MeshPattern2 } from './svg-patterns'
 
 interface StatCardProps {
   icon: LucideIcon
