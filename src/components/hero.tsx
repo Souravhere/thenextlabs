@@ -5,7 +5,6 @@ import { ArrowRight, Sparkles } from 'lucide-react'
 import { MeshGradient } from './ui/mesh-gradient'
 import { AnimatedButton } from './ui/animated-button'
 import { NewSpotlight } from './ui/NewSpotlight'
-import Image from 'next/image'
 
 export const Hero = () => {
   return (
