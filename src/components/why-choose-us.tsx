@@ -12,7 +12,7 @@ const technologies = [
   { name: 'JavaScript', icon: '/icons/js-icon.svg' },
   { name: 'TypeScript', icon: '/icons/typescript-icon.png' },
   { name: 'TailwindCSS', icon: '/icons/tailwind-icon.svg' },
-  { name: 'Framer Motion', icon: '/icons/framer-motion.avif' },
+  { name: 'Motion', icon: '/icons/framer-motion.avif' },
 ]
 
 const features = [
