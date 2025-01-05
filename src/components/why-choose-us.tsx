@@ -7,12 +7,12 @@ import { StatCard } from './ui/stat-card'
 import { MeshGradient } from './ui/mesh-gradient'
 
 const technologies = [
-  { name: 'React', icon: '/react.svg' },
-  { name: 'Next.js', icon: '/nextjs.svg' },
-  { name: 'JavaScript', icon: '/javascript.svg' },
-  { name: 'TypeScript', icon: '/typescript.svg' },
-  { name: 'TailwindCSS', icon: '/tailwind.svg' },
-  { name: 'Framer Motion', icon: '/framer.svg' },
+  { name: 'React', icon: '/icons/reactjs-icon.svg' },
+  { name: 'Next.js', icon: '/icons/nextjs-icon.svg' },
+  { name: 'JavaScript', icon: '/icons/js-icon.svg' },
+  { name: 'TypeScript', icon: '/icons/typescript-icon.png' },
+  { name: 'TailwindCSS', icon: '/icons/tailwind-icon.svg' },
+  { name: 'Framer Motion', icon: '/icons/framer-motion.avif' },
 ]
 
 const features = [
