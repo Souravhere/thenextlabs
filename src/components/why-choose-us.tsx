@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Rocket, Zap, Trophy, Clock } from 'lucide-react'
 import { TechIcon } from './ui/tech-icon'
 import { StatCard } from './ui/stat-card'
+import { MeshGradient } from './ui/mesh-gradient'
 
 const technologies = [
   { name: 'React', icon: '/react.svg' },
@@ -39,7 +40,8 @@ const features = [
 
 export const WhyChooseUs = () => {
   return (
-    <section className="py-20 overflow-hidden">
+    <section className="py-5 overflow-hidden relative">
+        <MeshGradient/>
       <div className="container px-4 mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
