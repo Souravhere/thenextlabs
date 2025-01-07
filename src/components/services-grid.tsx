@@ -18,7 +18,7 @@ const services = [
   {
     title: "Product Showcases",
     description: "Interactive product demonstrations that highlight your offerings effectively.",
-    image: "/placeholder.svg?height=400&width=600"
+    image: "/assets/Product.png"
   },
 ]
 
