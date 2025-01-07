@@ -13,7 +13,7 @@ const services = [
   {
     title: "Crypto & Web3 Platforms",
     description: "Modern websites for blockchain and cryptocurrency initiatives with Web3 integration.",
-    image: "/Thumb.png"
+    image: "/assets/crypto.png"
   },
   {
     title: "Product Showcases",
