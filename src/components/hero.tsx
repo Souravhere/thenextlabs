@@ -8,7 +8,7 @@ import { AnimatedButton } from './ui/animated-button'
 
 export const Hero = () => {
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+    <div className="relative min-h-screen sm:py-20 py-8 flex flex-col items-center justify-center overflow-hidden">
    { /* Background Elements */}
         {/* <NewSpotlight
             className="-top-40 left-0 md:left-60 md:-top-20"
@@ -48,7 +48,7 @@ export const Hero = () => {
     </motion.div>
           {/* Heading */}
           <div className="space-y-4 text-center">
-            <h1 className="text-5xl md:text-8xl lg:text-9xl font-bold tracking-tight relative">
+            <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold tracking-tight relative">
               <span className="relative">
                   <span className="relative z-10">The Next Labs for</span>
                   <span className="absolute inset-0 blur-3xl opacity-25 bg-gradient-to-r from-secondary via-accent to-primary"></span>
