@@ -71,15 +71,6 @@ export const Process = () => {
             <h2 className="text-3xl md:text-5xl font-bold mb-4">
               How it works?
             </h2>
-            <motion.span
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="absolute -top-8 right-0 bg-primary/10 px-3 py-1 rounded-full text-sm font-medium text-primary"
-            >
-              It's too way simple 😊
-            </motion.span>
           </motion.div>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
