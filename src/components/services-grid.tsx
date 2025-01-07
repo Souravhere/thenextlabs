@@ -8,12 +8,12 @@ const services = [
   {
     title: "Landing Pages for SaaS",
     description: "High-performing, visually engaging landing pages that convert visitors into customers.",
-    image: "/assets/sass.svg"
+    image: "/assets/Thumb.png"
   },
   {
     title: "Crypto & Web3 Platforms",
     description: "Modern websites for blockchain and cryptocurrency initiatives with Web3 integration.",
-    image: "/placeholder.svg?height=400&width=600"
+    image: "/Thumb.png"
   },
   {
     title: "Product Showcases",

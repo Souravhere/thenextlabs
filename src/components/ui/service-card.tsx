@@ -35,7 +35,7 @@ export const ServiceCard = ({ title, description, image, index }: ServiceCardPro
         <div className="absolute -right-20 -top-20 w-40 h-40 bg-primary/30 rounded-full blur-[100px] group-hover:bg-primary/40 transition-colors duration-500" />
         
         <div className="relative z-10">
-          <div className="aspect-[4/3] relative mb-6 rounded-lg overflow-hidden">
+          <div className="aspect-[4/2] relative mb-6 rounded-lg overflow-hidden">
             <Image
               src={image}
               alt={title}
