@@ -3,126 +3,53 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { type LucideIcon } from 'lucide-react'
 
 interface ProcessStepProps {
-  step: number
   title: string
   description: string
-  icon: React.ReactNode
-  isLast?: boolean
-  isActive?: boolean
-  onComplete?: () => void
+  icon: LucideIcon
+  delay?: number
 }
 
 export const ProcessStep = ({ 
-  step, 
   title, 
   description, 
-  icon, 
-  isLast = false,
-  isActive = false,
-  onComplete
+  icon: Icon,
+  delay = 0
 }: ProcessStepProps) => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
-  // Notify parent when this step's animation is complete
-  const handleAnimationComplete = () => {
-    if (isInView && onComplete) {
-      onComplete()
-    }
-  }
-
   return (
-    <div ref={ref} className="relative flex-1">
-      {/* Background Circle - Aligned to the right on even numbers */}
-      <motion.div
-        initial={{ scale: 0, opacity: 0 }}
-        animate={isInView ? { scale: 1, opacity: 0.05 } : { scale: 0, opacity: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        className={`absolute top-0 w-[200px] h-[200px] rounded-full bg-primary/10 blur-3xl
-          ${step % 2 === 0 ? 'right-0' : 'left-0'}`}
-      />
-
-      {/* Connecting Line - Hidden on mobile */}
-      {!isLast && (
-        <div className="absolute top-8 left-[50%] w-full h-[2px] bg-muted/20 hidden md:block">
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={isActive ? { scaleX: 1 } : { scaleX: 0 }}
-            onAnimationComplete={handleAnimationComplete}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="origin-left h-full bg-gradient-to-r from-primary via-secondary to-accent"
-          />
-        </div>
-      )}
-
-      {/* Step Content */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        className="relative flex flex-col items-center text-center px-4"
-      >
-        {/* Icon Circle */}
-        <div className="relative mb-4">
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={isInView ? { scale: 1 } : { scale: 0 }}
-            transition={{ type: "spring", stiffness: 200, damping: 15, delay: 0.2 }}
-            className={`w-16 h-16 rounded-full flex items-center justify-center relative z-10
-              ${isActive ? 'bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20' : 'bg-muted/10'}`}
-          >
-            {/* Glow Effect */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={isActive ? { opacity: 1 } : { opacity: 0.5 }}
-              transition={{ duration: 0.3 }}
-              className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 blur-xl"
-            />
-            
-            {/* Icon */}
-            <motion.div
-              animate={isActive ? {
-                scale: [1, 1.1, 1],
-                transition: { duration: 0.5, repeat: Infinity, repeatType: "reverse" }
-              } : {}}
-              className={`relative text-2xl ${isActive ? 'text-primary' : 'text-muted-foreground'}`}
-            >
-              {icon}
-            </motion.div>
-          </motion.div>
-          
-          {/* Step Number */}
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={isInView ? { scale: 1 } : { scale: 0 }}
-            transition={{ delay: 0.4 }}
-            className={`absolute -top-2 -right-2 w-6 h-6 rounded-full text-primary-foreground text-sm flex items-center justify-center
-              ${isActive ? 'bg-primary' : 'bg-muted'}`}
-          >
-            {step}
-          </motion.div>
+    <motion.div 
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.5, delay }}
+      className="group relative p-6"
+    >
+      {/* Hover Glow Effect */}
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/0 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl" />
+      
+      {/* Content */}
+      <div className="relative space-y-4">
+        {/* Icon */}
+        <div className="w-12 h-12 rounded-lg bg-muted/10 flex items-center justify-center group-hover:bg-primary/10 transition-colors duration-300">
+          <Icon className="w-6 h-6 text-primary/80 group-hover:text-primary transition-colors duration-300" />
         </div>
 
         {/* Text Content */}
-        <motion.h3
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ delay: 0.6 }}
-          className={`text-lg font-semibold mb-2 ${isActive ? 'text-foreground' : 'text-muted-foreground'}`}
-        >
-          {title}
-        </motion.h3>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ delay: 0.8 }}
-          className="text-sm text-muted-foreground"
-        >
-          {description}
-        </motion.p>
-      </motion.div>
-    </div>
+        <div className="space-y-2">
+          <h3 className="text-lg font-semibold text-foreground">
+            {title}
+          </h3>
+          <p className="text-muted-foreground text-sm leading-relaxed">
+            {description}
+          </p>
+        </div>
+      </div>
+    </motion.div>
   )
 }
+
