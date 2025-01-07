@@ -11,7 +11,7 @@ interface StatCardProps {
   delay?: number
 }
 
-export const StatCard = ({ icon: Icon, title, description, delay = 0 }: StatCardProps) => {
+export const StatCard = ({ icon: Icon, title, description }: StatCardProps) => {
   return (
     <motion.div
     initial={{ opacity: 0, y: 20 }}
