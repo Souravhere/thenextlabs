@@ -136,7 +136,7 @@ export const Hero = () => {
             transition={{ delay: 1.1, duration: 0.8 }}
             className="flex flex-wrap gap-6 justify-center px-2"
           >
-            <AnimatedButton href="#get-started" variant="primary">
+            <AnimatedButton href="/contact" variant="primary">
               Get started for free <Sparkles className="w-4 h-4" />
             </AnimatedButton>
             <AnimatedButton href="#contact" variant="secondary">

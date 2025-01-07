@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ReactNode } from 'react'
+import Link from 'next/link'
 
 interface AnimatedButtonProps {
   children: ReactNode
@@ -17,8 +18,8 @@ export const AnimatedButton = ({
   className = '' 
 }: AnimatedButtonProps) => {
   return (
-    <motion.a
-      href={href}
+    <Link href={href}>
+      <motion.div
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className={`
@@ -30,7 +31,7 @@ export const AnimatedButton = ({
         ${className}
       `}
     >
-      <motion.span
+      <motion.div
         className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 via-accent/20 to-secondary/20 blur-xl"
         animate={{
           opacity: [0.5, 0.3, 0.5],
@@ -41,10 +42,11 @@ export const AnimatedButton = ({
           repeatType: "reverse",
         }}
       />
-      <motion.span className="relative z-10 flex items-center gap-2">
+      <motion.div className="relative z-10 flex items-center gap-2">
         {children}
-      </motion.span>
-    </motion.a>
+      </motion.div>
+    </motion.div>
+    </Link>
   )
 }
 
