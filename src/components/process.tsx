@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Search, Palette, Figma, Code, BarChart } from 'lucide-react'
 import { ProcessStep } from './ui/process-step'
+import { useState } from 'react'
 
 const steps = [
   {
@@ -33,6 +34,14 @@ const steps = [
 ]
 
 export const Process = () => {
+  const [activeStep, setActiveStep] = useState(0)
+
+  const handleStepComplete = (index: number) => {
+    if (index < steps.length - 1) {
+      setActiveStep(index + 1)
+    }
+  }
+
   return (
     <section className="py-20 overflow-hidden">
       <div className="container px-4 mx-auto">
@@ -99,6 +108,8 @@ export const Process = () => {
                 description={step.description}
                 icon={step.icon}
                 isLast={index === steps.length - 1}
+                isActive={index <= activeStep}
+                onComplete={() => handleStepComplete(index)}
               />
             ))}
           </div>
