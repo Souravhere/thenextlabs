@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { type LucideIcon } from 'lucide-react'
+import { MeshPattern2 } from './svg-patterns'
 
 interface ProcessStepProps {
   title: string
@@ -27,11 +28,14 @@ export const ProcessStep = ({
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.5, delay }}
-      className="group relative p-6"
+      className="group relative sm:p-6 p-3 rounded-xl border border-muted/20"
     >
       {/* Hover Glow Effect */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/0 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl" />
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-300 opacity-0 group-hover:opacity-100" />
       
+      <div className='bg-transparent opacity-15'>
+        <MeshPattern2/>
+        </div>
       {/* Content */}
       <div className="relative space-y-4">
         {/* Icon */}
