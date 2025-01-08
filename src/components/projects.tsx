@@ -55,7 +55,7 @@ export const ProjectGrid = () => {
             transition={{ delay: 0.2 }}
             className="text-3xl md:text-5xl font-bold mb-4"
           >
-            What We Offer
+            Our Build
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -64,7 +64,7 @@ export const ProjectGrid = () => {
             transition={{ delay: 0.3 }}
             className="max-w-2xl mx-auto text-lg text-muted-foreground"
           >
-            From simple landing pages to complex web applications, we create
+            From simple landing pages to complex animated web, we create
             stunning digital experiences that drive results.
           </motion.p>
         </motion.div>
