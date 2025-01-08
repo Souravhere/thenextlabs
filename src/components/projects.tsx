@@ -5,24 +5,23 @@ import { MeshGradient } from './ui/mesh-gradient'
 import { AnimatedButton } from './ui/animated-button'
 import { ArrowUpRight } from 'lucide-react'
 import { ProjectCard } from './ui/projects-cards'
-import { link } from 'fs'
 
 const services = [
     {
         title: "Yellow Labs",
-        description: "Modern websites for blockchain and cryptocurrency initiatives with Web3 integration.",
+        description: "Yellow Labs is a leading Web3 consulting firm specializing in blockchain, cryptocurrency, and digital innovation.",
         image: "/projects/yellow-labs.png",
         link: "https://yellowlabs.vercel.app/"
     },
     {
-        title: "Spacethings",
-        description: "High-performing, visually engaging landing pages that convert visitors into customers.",
+        title: "Space Things",
+        description: "Space Things optimizes business environments and improves customer experience by providing advanced technology solutions.",
         image: "/projects/spacethings.png",
         link: "https://spacethings.vercel.app/"
     },
     {
         title: "Eagles",
-        description: "Interactive product demonstrations that highlight your offerings effectively.",
+        description: "Join the EAGLES revolution! Soar high with the meme coin that combines community, fun, and financial freedom on Solana.",
         image: "/projects/eagles.png",
         link: "https://eagles.wtf/"
     },
