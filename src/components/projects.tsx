@@ -11,14 +11,14 @@ const services = [
         image: "/projects/yellow-labs.png"
     },
     {
-        title: "Product Showcases",
-        description: "Interactive product demonstrations that highlight your offerings effectively.",
-        image: "/assets/Product.png"
+        title: "Spacethings",
+        description: "High-performing, visually engaging landing pages that convert visitors into customers.",
+        image: "/projects/spacethings.png"
     },
     {
-      title: "Spacethings",
-      description: "High-performing, visually engaging landing pages that convert visitors into customers.",
-      image: "/projects/spacethings.png"
+        title: "Eagles",
+        description: "Interactive product demonstrations that highlight your offerings effectively.",
+        image: "/projects/eagles.png"
     },
 ]
 
