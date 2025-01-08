@@ -4,6 +4,7 @@ import { Hero } from "../components/hero";
 import { Process } from "../components/process";
 import { ProjectGrid } from "../components/projects";
 import { ServicesGrid } from "../components/services-grid";
+import { Testimonials } from "../components/testimonials";
 import { WhyChooseUs } from "../components/why-choose-us";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <ServicesGrid/>
       <Process/>
       <ProjectGrid/>
+      <Testimonials/>
       <FAQSection/>
       {/* <div className="w-full h-screen"></div> */}
     </div>
