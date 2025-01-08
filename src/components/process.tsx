@@ -30,7 +30,7 @@ const steps = [
 
 export const Process = () => {
   return (
-    <section className="py-20 overflow-hidden relative">
+    <section className="py-10 overflow-hidden relative">
         <MeshGradient/>
         <motion.div
           initial={{ opacity: 0 }}
