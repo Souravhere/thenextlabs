@@ -1,4 +1,5 @@
 
+import { FAQSection } from "../components/faq-section";
 import { Hero } from "../components/hero";
 import { Process } from "../components/process";
 import { ProjectGrid } from "../components/projects";
@@ -13,6 +14,7 @@ export default function Home() {
       <ServicesGrid/>
       <Process/>
       <ProjectGrid/>
+      <FAQSection/>
       {/* <div className="w-full h-screen"></div> */}
     </div>
   );
