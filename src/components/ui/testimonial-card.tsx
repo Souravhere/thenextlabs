@@ -56,7 +56,7 @@ export const TestimonialCard = ({
           {/* Quote */}
           <blockquote className="mb-8">
             <p className="text-muted-foreground leading-relaxed">
-              "{quote}"
+            {quote}
             </p>
           </blockquote>
 
