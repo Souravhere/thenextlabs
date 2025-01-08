@@ -3,43 +3,46 @@
 import { motion } from 'framer-motion'
 import { Code, Palette, Zap, Users, FileCode, DollarSign } from 'lucide-react'
 import { FAQCard } from './ui/faq-card'
+import { MeshGradient } from './ui/mesh-gradient'
 
 const faqs = [
-  {
-    question: "What technologies do you use for development?",
-    answer: "We specialize in modern web technologies including Next.js, React.js, and TailwindCSS. Our stack ensures fast, responsive, and SEO-optimized websites with stunning animations.",
-    icon: <Code className="w-6 h-6 text-primary" />
-  },
-  {
-    question: "How do you handle design processes?",
-    answer: "Our design process starts with understanding your brand, followed by creating wireframes and interactive prototypes in Figma. We ensure each design is unique and aligns with your vision.",
-    icon: <Palette className="w-6 h-6 text-primary" />
-  },
-  {
-    question: "What's your typical project timeline?",
-    answer: "Most projects are completed within 1-2 weeks. We maintain efficiency without compromising quality through our streamlined development process.",
-    icon: <Zap className="w-6 h-6 text-primary" />
-  },
-  {
-    question: "Do you offer support after launch?",
-    answer: "Yes, we provide comprehensive post-launch support including technical maintenance, SEO optimization, and content updates to ensure your website performs optimally.",
-    icon: <Users className="w-6 h-6 text-primary" />
-  },
-  {
-    question: "Can you help with existing websites?",
-    answer: "We can help optimize, redesign, or completely rebuild existing websites to improve performance, user experience, and visual appeal.",
-    icon: <FileCode className="w-6 h-6 text-primary" />
-  },
-  {
-    question: "What are your pricing models?",
-    answer: "We offer flexible pricing based on project scope and requirements. Contact us for a detailed quote tailored to your specific needs.",
-    icon: <DollarSign className="w-6 h-6 text-primary" />
-  }
+        {
+          question: "What technologies power your animated websites?",
+          answer: "We specialize in cutting-edge technologies like Next.js, React.js, and TailwindCSS. These ensure our websites are fast, responsive, SEO-optimized, and rich with stunning animations.",
+          icon: <Code className="w-6 h-6 text-primary" />
+        },
+        {
+          question: "How do you approach the design process?",
+          answer: "Our process begins with in-depth research on your brand and goals. We then create wireframes and final prototypes in Figma, ensuring every design is visually stunning and aligns perfectly with your vision.",
+          icon: <Palette className="w-6 h-6 text-primary" />
+        },
+        {
+          question: "How long does it take to complete a project?",
+          answer: "Our streamlined process allows us to complete most projects within a week, delivering high-quality results without compromising creativity or functionality.",
+          icon: <Zap className="w-6 h-6 text-primary" />
+        },
+        {
+          question: "Do you provide post-launch support?",
+          answer: "Absolutely! We offer ongoing support, including technical maintenance, SEO optimization, and updates to ensure your website stays at the top of its game.",
+          icon: <Users className="w-6 h-6 text-primary" />
+        },
+        {
+          question: "Can you upgrade or redesign my current website?",
+          answer: "Yes, we can optimize, redesign, or even rebuild your existing website to elevate its performance, aesthetics, and user experience.",
+          icon: <FileCode className="w-6 h-6 text-primary" />
+        },
+        {
+          question: "What is your pricing structure?",
+          answer: "Our pricing is tailored to the scope and complexity of each project. Reach out to us for a personalized quote that meets your needs and budget.",
+          icon: <DollarSign className="w-6 h-6 text-primary" />
+        }
+      
 ]
 
 export const FAQSection = () => {
   return (
-    <section className="py-20 overflow-hidden">
+    <section className="py-20 overflow-hidden relative">
+        <MeshGradient/>
       <div className="container px-4 mx-auto">
         {/* Section Header */}
         <motion.div
