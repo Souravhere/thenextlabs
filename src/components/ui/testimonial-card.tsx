@@ -31,7 +31,7 @@ export const TestimonialCard = ({
       whileHover={{ y: -5 }}
       className="group"
     >
-      <div className="h-full rounded-2xl bg-gradient-to-b from-muted/10 via-muted/5 to-transparent border border-muted/10 p-8 backdrop-blur-sm relative overflow-hidden">
+      <div className="h-full rounded-2xl bg-gradient-to-b from-muted/10 via-muted/5 to-transparent border border-muted/20 p-8 backdrop-blur-sm relative overflow-hidden">
         {/* Glow Effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
