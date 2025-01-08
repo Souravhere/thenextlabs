@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import { MeshGradient } from './ui/mesh-gradient'
 import { AnimatedButton } from './ui/animated-button'
 // import { NewSpotlight } from './ui/NewSpotlight'
@@ -39,7 +39,7 @@ export const Hero = () => {
             whileHover={{ scale: 1.02 }}
             className="flex items-center gap-3 px-4 py-2 md:px-6 md:py-3 rounded-full bg-gradient-to-r from-muted/50 to-muted/20 backdrop-blur-sm border border-muted/20 shadow-lg shadow-black/10"
         >
-            <Sparkles className="w-4 h-4 text-secondary" />
+            <ArrowUpRight className="w-4 h-4 text-secondary" />
             <span className="text-xs md:text-sm font-medium bg-gradient-to-r from-foreground/90 to-foreground/70 bg-clip-text text-transparent">
                 Transforming Ideas Into Animated Experiences
             </span>
@@ -136,12 +136,12 @@ export const Hero = () => {
             transition={{ delay: 1.1, duration: 0.8 }}
             className="flex flex-wrap gap-6 justify-center px-2"
           >
-            <AnimatedButton href="/contact" variant="primary">
-              Get started for free <Sparkles className="w-4 h-4" />
+            <AnimatedButton href="/contact" variant="primary" className='h-16 w-58 flex items-center justify-center text-xl'>
+               Book a Call <ArrowUpRight className="w-8 h-8" />
             </AnimatedButton>
-            <AnimatedButton href="#contact" variant="secondary">
+            {/* <AnimatedButton href="#contact" variant="secondary">
               Contact us <ArrowRight className="w-4 h-4" />
-            </AnimatedButton>
+            </AnimatedButton> */}
           </motion.div>
         </motion.div>
       </div>

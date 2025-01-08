@@ -1,4 +1,5 @@
 
+import { CTA } from "../components/cta";
 import { FAQSection } from "../components/faq-section";
 import { Hero } from "../components/hero";
 import { Process } from "../components/process";
@@ -17,6 +18,7 @@ export default function Home() {
       <ProjectGrid/>
       <Testimonials/>
       <FAQSection/>
+      <CTA/>
       {/* <div className="w-full h-screen"></div> */}
     </div>
   );
