@@ -1,26 +1,30 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ServiceCard } from './ui/service-card'
 import { MeshGradient } from './ui/mesh-gradient'
 import { AnimatedButton } from './ui/animated-button'
 import { ArrowUpRight } from 'lucide-react'
+import { ProjectCard } from './ui/projects-cards'
+import { link } from 'fs'
 
 const services = [
     {
         title: "Yellow Labs",
         description: "Modern websites for blockchain and cryptocurrency initiatives with Web3 integration.",
-        image: "/projects/yellow-labs.png"
+        image: "/projects/yellow-labs.png",
+        link: "https://yellowlabs.vercel.app/"
     },
     {
         title: "Spacethings",
         description: "High-performing, visually engaging landing pages that convert visitors into customers.",
-        image: "/projects/spacethings.png"
+        image: "/projects/spacethings.png",
+        link: "https://spacethings.vercel.app/"
     },
     {
         title: "Eagles",
         description: "Interactive product demonstrations that highlight your offerings effectively.",
-        image: "/projects/eagles.png"
+        image: "/projects/eagles.png",
+        link: "https://eagles.wtf/"
     },
 ]
 
@@ -67,7 +71,7 @@ export const ProjectGrid = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <ServiceCard
+            <ProjectCard
               key={service.title}
               {...service}
               index={index}
