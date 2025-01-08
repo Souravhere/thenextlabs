@@ -8,9 +8,9 @@ import { MeshGradient } from './ui/mesh-gradient'
 import { AnimatedButton } from './ui/animated-button'
 
 const avatars = [
-  '/placeholder.svg?height=100&width=100',
-  '/placeholder.svg?height=100&width=100',
-  '/placeholder.svg?height=100&width=100'
+    '/assets/memoji2.avif',
+    '/assets/memoji1.avif',
+  '/assets/memoji3.avif'
 ]
 
 export const CTA = () => {
@@ -43,7 +43,7 @@ export const CTA = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.2 }}
-                  className="relative w-16 h-16 rounded-full border-4 border-background overflow-hidden"
+                  className="relative w-16 h-16 bg-slate-300 rounded-full border-4 border-background overflow-hidden"
                 >
                   <Image
                     src={avatar}
