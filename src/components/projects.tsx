@@ -5,21 +5,21 @@ import { ServiceCard } from './ui/service-card'
 import { MeshGradient } from './ui/mesh-gradient'
 
 const services = [
-  {
-    title: "Spacethings",
-    description: "High-performing, visually engaging landing pages that convert visitors into customers.",
-    image: "/projects/spacethings.png"
-  },
-  {
-    title: "Crypto & Web3 Platforms",
-    description: "Modern websites for blockchain and cryptocurrency initiatives with Web3 integration.",
-    image: "/assets/crypto.png"
-  },
-  {
-    title: "Product Showcases",
-    description: "Interactive product demonstrations that highlight your offerings effectively.",
-    image: "/assets/Product.png"
-  },
+    {
+        title: "Yellow Labs",
+        description: "Modern websites for blockchain and cryptocurrency initiatives with Web3 integration.",
+        image: "/projects/yellow-labs.png"
+    },
+    {
+        title: "Product Showcases",
+        description: "Interactive product demonstrations that highlight your offerings effectively.",
+        image: "/assets/Product.png"
+    },
+    {
+      title: "Spacethings",
+      description: "High-performing, visually engaging landing pages that convert visitors into customers.",
+      image: "/projects/spacethings.png"
+    },
 ]
 
 export const ProjectGrid = () => {
