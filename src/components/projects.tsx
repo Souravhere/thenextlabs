@@ -43,7 +43,7 @@ export const ProjectGrid = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-block px-3 py-1 mb-4 text-sm font-semibold text-primary border border-primary/20 rounded-full"
+            className="inline-block px-4 py-1 mb-4 text-sm font-semibold text-primary border border-primary/20 rounded-full"
           >
             OUR PROJECTS
           </motion.div>
