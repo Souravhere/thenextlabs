@@ -44,6 +44,11 @@ body {
   }
 }
 
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
   display: none;
+}
+
+* ::selection {
+  background-color: rgba(var(--primary), 0.5);
+  color: rgba(var(--primary-foreground), 1);
 }
