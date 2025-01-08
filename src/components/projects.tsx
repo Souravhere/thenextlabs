@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion'
 import { ServiceCard } from './ui/service-card'
 import { MeshGradient } from './ui/mesh-gradient'
+import { AnimatedButton } from './ui/animated-button'
+import { ArrowUpRight } from 'lucide-react'
 
 const services = [
     {
@@ -73,6 +75,16 @@ export const ProjectGrid = () => {
           ))}
         </div>
       </div>
+      <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className='w-full flex items-center justify-center py-7'
+          >
+           <AnimatedButton href="/projects" variant="secondary" className='border-primary/20'>
+                More Projects <ArrowUpRight className="w-6 h-6" />
+            </AnimatedButton>
+          </motion.div>
     </section>
   )
 }
