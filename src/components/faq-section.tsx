@@ -41,7 +41,7 @@ const faqs = [
 
 export const FAQSection = () => {
   return (
-    <section className="py-20 overflow-hidden relative">
+    <section className="py-10 overflow-hidden relative">
         <MeshGradient/>
       <div className="container px-4 mx-auto">
         {/* Section Header */}
