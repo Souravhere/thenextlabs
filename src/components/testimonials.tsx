@@ -5,44 +5,29 @@ import { motion } from 'framer-motion'
 import { TestimonialCard } from './ui/testimonial-card'
 // import { Button } from '@/components/ui/button'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { MeshGradient } from './ui/mesh-gradient'
 
 const testimonials = [
   {
-    name: "Sarah Chen",
-    role: "Founder & CEO",
-    company: "TechFlow AI",
+    name: "Yellow Labs",
+    role: "DIRECTOR | Co-Founder",
+    company: "Yellow Labs",
     companyLogo: "/placeholder.svg?height=32&width=120",
     quote: "The Next Labs transformed our vision into reality. Their animated website perfectly captures our brand's innovative spirit.",
     avatar: "/placeholder.svg?height=100&width=100"
   },
   {
-    name: "Michael Rodriguez",
-    role: "Chief Technology Officer",
-    company: "CryptoVerse",
-    companyLogo: "/placeholder.svg?height=32&width=120",
-    quote: "Working with The Next Labs was a game-changer. They delivered a stunning website that exceeded our expectations.",
-    avatar: "/placeholder.svg?height=100&width=100"
-  },
-  {
-    name: "Emma Watson",
-    role: "Marketing Director",
-    company: "SaaS Master",
-    companyLogo: "/placeholder.svg?height=32&width=120",
-    quote: "The attention to detail and animated elements brought our platform to life. Highly recommend their services!",
-    avatar: "/placeholder.svg?height=100&width=100"
-  },
-  {
     name: "David Kim",
     role: "Product Manager",
-    company: "InnovateLabs",
+    company: "Space Things",
     companyLogo: "/placeholder.svg?height=32&width=120",
     quote: "The Next Labs helped us create a website that truly represents our brand. The animations are smooth and purposeful.",
     avatar: "/placeholder.svg?height=100&width=100"
   },
   {
-    name: "Lisa Thompson",
-    role: "Creative Director",
-    company: "DesignPro",
+    name: "Jaden Kim",
+    role: "DIRECTOR | Co-Founder",
+    company: "Eagles",
     companyLogo: "/placeholder.svg?height=32&width=120",
     quote: "As a design professional, I'm impressed by their attention to detail and creative solutions. Outstanding work!",
     avatar: "/placeholder.svg?height=100&width=100"
@@ -50,7 +35,7 @@ const testimonials = [
   {
     name: "James Wilson",
     role: "Startup Founder",
-    company: "NextGen Solutions",
+    company: "Hash Pet",
     companyLogo: "/placeholder.svg?height=32&width=120",
     quote: "They understood our startup's needs perfectly and delivered a website that helps us stand out in the market.",
     avatar: "/placeholder.svg?height=100&width=100"
@@ -58,15 +43,15 @@ const testimonials = [
   {
     name: "Anna Martinez",
     role: "Head of Growth",
-    company: "ScaleUp",
+    company: "Hflag",
     companyLogo: "/placeholder.svg?height=32&width=120",
     quote: "The website they built has significantly improved our conversion rates. The animations are both beautiful and functional.",
     avatar: "/placeholder.svg?height=100&width=100"
   },
   {
-    name: "Tom Anderson",
-    role: "CEO",
-    company: "FutureTech",
+    name: "Sourav Chhimpa",
+    role: "Founder",
+    company: "The Next Labs",
     companyLogo: "/placeholder.svg?height=32&width=120",
     quote: "The Next Labs delivered beyond our expectations. Their expertise in animated websites is truly remarkable.",
     avatar: "/placeholder.svg?height=100&width=100"
@@ -87,7 +72,8 @@ export const Testimonials = () => {
   }
 
   return (
-    <section className="py-20 overflow-hidden">
+    <section className="py-20 overflow-hidden relative">
+        <MeshGradient/>
       <div className="container px-4 mx-auto">
         {/* Section Header */}
         <motion.div
