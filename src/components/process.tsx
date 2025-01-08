@@ -37,7 +37,7 @@ export const Process = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-16 px-3"
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
