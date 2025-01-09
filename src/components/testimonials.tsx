@@ -9,28 +9,28 @@ import { MeshGradient } from './ui/mesh-gradient'
 
 const testimonials = [
   {
-    name: "Yellow Labs",
+    name: "Jeff Lee",
     role: "DIRECTOR | Co-Founder",
     company: "Yellow Labs",
-    companyLogo: "/placeholder.svg?height=32&width=120",
+    companyLogo: "/TESTIMONIALS/yellowlabs.png",
     quote: "The Next Labs transformed our vision into reality. Their animated website perfectly captures our brand's innovative spirit.",
-    avatar: "/placeholder.svg?height=100&width=100"
+    avatar: "/TESTIMONIALS/jeff.png"
   },
   {
     name: "David Kim",
     role: "Product Manager",
     company: "Space Things",
-    companyLogo: "/placeholder.svg?height=32&width=120",
+    companyLogo: "/TESTIMONIALS/logo.png",
     quote: "The Next Labs helped us create a website that truly represents our brand. The animations are smooth and purposeful.",
-    avatar: "/placeholder.svg?height=100&width=100"
+    avatar: "/TESTIMONIALS/kim-david.jpg"
   },
   {
     name: "Jaden Kim",
     role: "DIRECTOR | Co-Founder",
     company: "Eagles",
-    companyLogo: "/placeholder.svg?height=32&width=120",
+    companyLogo: "/TESTIMONIALS/yellowlabs.png",
     quote: "As a design professional, I'm impressed by their attention to detail and creative solutions. Outstanding work!",
-    avatar: "/placeholder.svg?height=100&width=100"
+    avatar: "/TESTIMONIALS/JadenKim.png"
   },
   {
     name: "James Wilson",
