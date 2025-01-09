@@ -186,7 +186,7 @@ export const Testimonials = () => {
           </AnimatePresence>
 
           {/* Navigation */}
-          <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex items-center gap-4">
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex items-center gap-4">
             <button
               onClick={() => paginate(-1)}
               className="rounded-full border border-muted-foreground/30 p-3 hover:bg-primary/10 transition-colors"
