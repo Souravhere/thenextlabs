@@ -1,4 +1,5 @@
 
+import CompetitorComparison from "../components/competitor-comparison";
 import { CTA } from "../components/cta";
 import { FAQSection } from "../components/faq-section";
 import { Hero } from "../components/hero";
@@ -17,6 +18,7 @@ export default function Home() {
       <Process/>
       <ProjectGrid/>
       <Testimonials/>
+      <CompetitorComparison/>
       <FAQSection/>
       <CTA/>
       {/* <div className="w-full h-screen"></div> */}
