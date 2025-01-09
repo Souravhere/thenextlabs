@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { TestimonialCard } from './ui/testimonial-card'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { MeshGradient } from './ui/mesh-gradient'
@@ -57,30 +57,41 @@ const testimonials = [
   }
 ]
 
-export const Testimonials = () => {
-  const [currentPage, setCurrentPage] = useState(0)
-  const [isAutoScrollPaused, setIsAutoScrollPaused] = useState(false)
-//   const controls = useAnimation()
-  
-  // Adjust testimonials per page based on screen size
-  const getTestimonialsPerPage = () => {
-    if (typeof window !== 'undefined') {
-      return window.innerWidth < 768 ? 1 : 3
-    }
-    return 3
-  }
-  
-  const [testimonialsPerPage, setTestimonialsPerPage] = useState(getTestimonialsPerPage())
-  const totalPages = Math.ceil(testimonials.length / testimonialsPerPage)
+const slideVariants = {
+  enter: (direction: number) => ({
+    x: direction > 0 ? 1000 : -1000,
+    opacity: 0
+  }),
+  center: {
+    zIndex: 1,
+    x: 0,
+    opacity: 1
+  },
+  exit: (direction: number) => ({
+    zIndex: 0,
+    x: direction < 0 ? 1000 : -1000,
+    opacity: 0
+  })
+}
 
+export const Testimonials = () => {
+  const [[page, direction], setPage] = useState([0, 0])
+  const [isAutoScrollPaused, setIsAutoScrollPaused] = useState(false)
+  
+  // Responsive settings
+  const [isMobile, setIsMobile] = useState(false)
+  const testimonialsPerPage = isMobile ? 1 : 3
+  const totalPages = Math.ceil(testimonials.length / testimonialsPerPage)
+  
   // Handle window resize
   useEffect(() => {
-    const handleResize = () => {
-      setTestimonialsPerPage(getTestimonialsPerPage())
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
     }
     
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
   // Auto-scroll functionality
@@ -89,42 +100,34 @@ export const Testimonials = () => {
 
     if (!isAutoScrollPaused) {
       interval = setInterval(() => {
-        setCurrentPage((prev) => (prev + 1) % totalPages)
-      }, 3000) // Change slide every 5 seconds
+        paginate(1)
+      }, 3000)
     }
 
     return () => clearInterval(interval)
-  }, [totalPages, isAutoScrollPaused])
+  }, [isAutoScrollPaused])
 
-  const nextPage = () => {
-    setIsAutoScrollPaused(true)
-    setCurrentPage((prev) => (prev + 1) % totalPages)
-    // Resume auto-scroll after 5 seconds of inactivity
-    setTimeout(() => setIsAutoScrollPaused(false), 5000)
+  const paginate = (newDirection: number) => {
+    setPage(([current]) => {
+      const newPage = (current + newDirection + totalPages) % totalPages
+      return [newPage, newDirection]
+    })
   }
 
-  const prevPage = () => {
-    setIsAutoScrollPaused(true)
-    setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages)
-    // Resume auto-scroll after 5 seconds of inactivity
-    setTimeout(() => setIsAutoScrollPaused(false), 5000)
-  }
-
-  const goToPage = (page: number) => {
-    setIsAutoScrollPaused(true)
-    setCurrentPage(page)
-    // Resume auto-scroll after 5 seconds of inactivity
-    setTimeout(() => setIsAutoScrollPaused(false), 5000)
+  // Get visible testimonials based on current page
+  const getVisibleTestimonials = () => {
+    const start = page * testimonialsPerPage
+    return testimonials.slice(start, start + testimonialsPerPage)
   }
 
   return (
     <section className="py-10 overflow-hidden relative">
-      <MeshGradient/>
+      <MeshGradient />
       <div className="container px-4 mx-auto">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
@@ -137,55 +140,57 @@ export const Testimonials = () => {
           >
             TESTIMONIALS
           </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-3xl md:text-5xl font-bold mb-4"
-          >
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">
             What Our Clients Say
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="max-w-2xl mx-auto text-lg text-muted-foreground"
-          >
+          </h2>
+          <p className="max-w-2xl mx-auto text-lg text-muted-foreground">
             Hear from our satisfied clients about their experience working with us
-          </motion.p>
+          </p>
         </motion.div>
 
         {/* Testimonials Carousel */}
         <div 
-          className="relative"
+          className="relative min-h-[400px]"
           onMouseEnter={() => setIsAutoScrollPaused(true)}
           onMouseLeave={() => setIsAutoScrollPaused(false)}
         >
-          <motion.div
-            animate={{ x: `-${currentPage * 100}%` }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="flex gap-6"
-          >
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={testimonial.name}
-                className="w-full md:w-1/3 flex-shrink-0"
-              >
-                <TestimonialCard
-                  {...testimonial}
-                  delay={index % testimonialsPerPage * 0.1}
-                />
+          <AnimatePresence initial={false} custom={direction}>
+            <motion.div 
+              key={page}
+              custom={direction}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{
+                x: { type: "spring", stiffness: 300, damping: 30 },
+                opacity: { duration: 0.2 }
+              }}
+              className="absolute w-full"
+            >
+              <div className={`grid gap-6 ${
+                isMobile 
+                  ? 'grid-cols-1' 
+                  : 'grid-cols-3'
+              }`}>
+                {getVisibleTestimonials().map((testimonial, index) => (
+                  <div key={`${testimonial.name}-${page}-${index}`}>
+                    <TestimonialCard
+                      {...testimonial}
+                      delay={index * 0.1}
+                    />
+                  </div>
+                ))}
               </div>
-            ))}
-          </motion.div>
+            </motion.div>
+          </AnimatePresence>
 
           {/* Navigation */}
-          <div className="flex justify-center items-center gap-4 mt-12">
+          <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex items-center gap-4">
             <button
-              onClick={prevPage}
-              className="rounded-full border border-muted-foreground/30 p-3 hover:bg-primary/10 transition-colors" 
+              onClick={() => paginate(-1)}
+              className="rounded-full border border-muted-foreground/30 p-3 hover:bg-primary/10 transition-colors"
+              aria-label="Previous testimonials"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
@@ -195,9 +200,9 @@ export const Testimonials = () => {
               {Array.from({ length: totalPages }).map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => goToPage(index)}
+                  onClick={() => setPage([index, index > page ? 1 : -1])}
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === currentPage 
+                    index === page 
                       ? 'w-8 bg-primary' 
                       : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
                   }`}
@@ -207,8 +212,9 @@ export const Testimonials = () => {
             </div>
 
             <button
-              onClick={nextPage}
-              className="rounded-full border border-muted-foreground/30 p-3 hover:bg-primary/10 transition-colors" 
+              onClick={() => paginate(1)}
+              className="rounded-full border border-muted-foreground/30 p-3 hover:bg-primary/10 transition-colors"
+              aria-label="Next testimonials"
             >
               <ChevronRight className="w-4 h-4" />
             </button>
