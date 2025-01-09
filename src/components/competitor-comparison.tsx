@@ -148,7 +148,7 @@ const CompetitorComparison: React.FC = () => {
                   height={40}
                   className="mb-2"
                 />
-                <span className="text-lg font-semibold">The Next Labs</span>
+                <span className="sm:inline-block hidden text-lg font-semibold">The Next Labs</span>
               </div>
               {competitors.map((competitor, index) => (
                 <div key={index} className="flex flex-col items-center justify-center">
