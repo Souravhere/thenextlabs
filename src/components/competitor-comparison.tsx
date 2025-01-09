@@ -143,26 +143,19 @@ const CompetitorComparison: React.FC = () => {
             {/* Table Header */}
             <div className="grid grid-cols-4 gap-4 mb-6 items-center">
               <div className="text-lg font-semibold">Features</div>
-              <div className="flex flex-col items-center justify-center">
+              <div className="flex items-center justify-center">
                 <Image
                   src="/Logos/thenextlabs.svg"
                   alt="The Next Labs"
-                  width={60}
-                  height={60}
+                  width={40}
+                  height={40}
                   className="mb-2"
                 />
-                <span className="text-sm font-medium">The Next Labs</span>
+                <span className="text-lg font-semibold">The Next Labs</span>
               </div>
               {competitors.map((competitor, index) => (
                 <div key={index} className="flex flex-col items-center justify-center">
-                  <Image
-                    src={competitor.logo}
-                    alt={competitor.name}
-                    width={40}
-                    height={40}
-                    className="mb-2"
-                  />
-                  <span className="text-sm font-medium">{competitor.name}</span>
+                  <span className="text-lg font-semibold">{competitor.name}</span>
                 </div>
               ))}
             </div>
