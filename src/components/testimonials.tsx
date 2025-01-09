@@ -25,20 +25,20 @@ const testimonials = [
     avatar: "/TESTIMONIALS/kim-david.jpg"
   },
   {
-    name: "Jaden Kim",
-    role: "DIRECTOR | Co-Founder",
-    company: "Eagles",
-    companyLogo: "/TESTIMONIALS/yellowlabs.png",
-    quote: "As a design professional, I'm impressed by their attention to detail and creative solutions. Outstanding work!",
-    avatar: "/TESTIMONIALS/JadenKim.png"
-  },
-  {
     name: "James Wilson",
     role: "Startup Founder",
     company: "Hash Pet",
     companyLogo: "/TESTIMONIALS/hashpet.webp",
     quote: "They understood our startup's needs perfectly and delivered a website that helps us stand out in the market.",
     avatar: "/assets/memoji1.avif"
+  },
+  {
+    name: "Jaden Kim",
+    role: "DIRECTOR | Co-Founder",
+    company: "Eagles",
+    companyLogo: "/TESTIMONIALS/yellowlabs.png",
+    quote: "As a design professional, I'm impressed by their attention to detail and creative solutions. Outstanding work!",
+    avatar: "/TESTIMONIALS/JadenKim.png"
   },
   {
     name: "Anna Martinez",
