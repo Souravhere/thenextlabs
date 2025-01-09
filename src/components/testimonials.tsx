@@ -35,7 +35,7 @@ const testimonials = [
     name: "Jaden Kim",
     role: "DIRECTOR | Co-Founder",
     company: "Eagles",
-    companyLogo: "/TESTIMONIALS/yellowlabs.png",
+    companyLogo: "/TESTIMONIALS/eagles.png",
     quote: "As a design professional, I'm impressed by their attention to detail and creative solutions. Outstanding work!",
     avatar: "/TESTIMONIALS/JadenKim.png"
   },
@@ -43,7 +43,7 @@ const testimonials = [
     name: "Anna Martinez",
     role: "Head of Growth",
     company: "Hflag",
-    companyLogo: "/TESTIMONIALS/hflag.webp",
+    companyLogo: "/TESTIMONIALS/hflag.png",
     quote: "The website they built has significantly improved our conversion rates. The animations are both beautiful and functional.",
     avatar: "/assets/memoji2.avif"
   },
@@ -51,7 +51,7 @@ const testimonials = [
     name: "Sourav Chhimpa",
     role: "Founder",
     company: "The Next Labs",
-    companyLogo: "/Logos/thenextlabs.svg",
+    companyLogo: "/TESTIMONIALS/thenextlabs.png",
     quote: "The Next Labs delivered beyond our expectations. Their expertise in animated websites is truly remarkable.",
     avatar: "/assets/memoji3.avif"
   }
