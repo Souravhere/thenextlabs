@@ -2,9 +2,10 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Check, X, Zap } from 'lucide-react'
+import { Check, X, Zap, ArrowUpRight } from 'lucide-react'
 import Image from 'next/image'
 import { MeshGradient } from './ui/mesh-gradient'
+import { AnimatedButton } from './ui/animated-button'
 
 interface Feature {
   name: string;
@@ -186,13 +187,17 @@ const CompetitorComparison: React.FC = () => {
                 Experience the difference with our cutting-edge technology and dedicated team. 
                 We don't just meet expectations; we exceed them.
               </p>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-shadow"
-              >
-                Start Your Project
-              </motion.button>
+              {/* CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.1, duration: 0.8 }}
+            className="inline-block px-2"
+          >
+            <AnimatedButton href="/contact" variant="primary">
+               Book a Call <ArrowUpRight className="w-6 h-6" />
+            </AnimatedButton>
+          </motion.div>
             </motion.div>
           </motion.div>
 
