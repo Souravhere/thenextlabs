@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import { MeshGradient } from './ui/mesh-gradient'
 import { AnimatedButton } from './ui/animated-button'
-import { Sparkle } from './ui/sparkle'
 // import { NewSpotlight } from './ui/NewSpotlight'
 
 export const Hero = () => {
