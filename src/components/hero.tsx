@@ -4,20 +4,10 @@ import { motion } from 'framer-motion'
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import { MeshGradient } from './ui/mesh-gradient'
 import { AnimatedButton } from './ui/animated-button'
-// import { NewSpotlight } from './ui/NewSpotlight'
 
 export const Hero = () => {
   return (
     <div className="relative min-h-screen sm:py-20 py-8 flex flex-col items-center justify-center overflow-hidden">
-   { /* Background Elements */}
-        {/* <NewSpotlight
-            className="-top-40 left-0 md:left-60 md:-top-20"
-            fill="white"
-        />
-        <NewSpotlight
-            className="-top-40 left-0 md:left-60 md:-top-20"
-            fill="white"
-        /> */}
         <MeshGradient />
         {/* Main Content */}
       <div className="container w-full mx-auto text-center relative">
@@ -103,29 +93,6 @@ export const Hero = () => {
                         React.js
                     </span>
                 </motion.div>
-            {/* <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.9, duration: 1 }}
-              className="relative"
-            >
-              <span className="relative text-xl font-semibold bg-primary bg-clip-text text-transparent">
-                Zero Compromises.
-              </span>
-              <motion.span
-                className="absolute inset-0 blur-sm bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text text-transparent"
-                animate={{
-                  opacity: [0.5, 0.8, 0.5],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                }}
-              >
-                Zero Compromises.
-              </motion.span>
-            </motion.div> */}
           </div>
 
           {/* CTAs */}
