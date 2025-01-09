@@ -20,7 +20,7 @@ const testimonials = [
     name: "David Kim",
     role: "Product Manager",
     company: "Space Things",
-    companyLogo: "/TESTIMONIALS/logo.png",
+    companyLogo: "/TESTIMONIALS/spacethings.png",
     quote: "The Next Labs helped us create a website that truly represents our brand. The animations are smooth and purposeful.",
     avatar: "/TESTIMONIALS/kim-david.jpg"
   },
@@ -36,25 +36,25 @@ const testimonials = [
     name: "James Wilson",
     role: "Startup Founder",
     company: "Hash Pet",
-    companyLogo: "/placeholder.svg?height=32&width=120",
+    companyLogo: "/TESTIMONIALS/hashpet.webp",
     quote: "They understood our startup's needs perfectly and delivered a website that helps us stand out in the market.",
-    avatar: "/placeholder.svg?height=100&width=100"
+    avatar: "/assets/memoji1.avif"
   },
   {
     name: "Anna Martinez",
     role: "Head of Growth",
     company: "Hflag",
-    companyLogo: "/placeholder.svg?height=32&width=120",
+    companyLogo: "/TESTIMONIALS/hflag.webp",
     quote: "The website they built has significantly improved our conversion rates. The animations are both beautiful and functional.",
-    avatar: "/placeholder.svg?height=100&width=100"
+    avatar: "/assets/memoji2.avif"
   },
   {
     name: "Sourav Chhimpa",
     role: "Founder",
     company: "The Next Labs",
-    companyLogo: "/placeholder.svg?height=32&width=120",
+    companyLogo: "/Logos/thenextlabs.svg",
     quote: "The Next Labs delivered beyond our expectations. Their expertise in animated websites is truly remarkable.",
-    avatar: "/placeholder.svg?height=100&width=100"
+    avatar: "/assets/memoji3.avif"
   }
 ]
 
