@@ -113,7 +113,7 @@ export const Hero = () => {
               <span className="relative text-xl font-semibold bg-primary bg-clip-text text-transparent">
                 Zero Compromises.
               </span>
-              <motion.span
+              {/* <motion.span
                 className="absolute inset-0 blur-sm bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text text-transparent"
                 animate={{
                   opacity: [0.5, 0.8, 0.5],
@@ -125,7 +125,7 @@ export const Hero = () => {
                 }}
               >
                 Zero Compromises.
-              </motion.span>
+              </motion.span> */}
             </motion.div>
           </div>
 
