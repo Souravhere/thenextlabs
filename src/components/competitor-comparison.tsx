@@ -4,6 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Check, X, Zap } from 'lucide-react'
 import Image from 'next/image'
+import { MeshGradient } from './ui/mesh-gradient'
 
 interface Feature {
   name: string;
@@ -90,17 +91,28 @@ const FeatureCheck: React.FC<FeatureCheckProps> = ({ checked, isNextLabs = false
 
 const CompetitorComparison: React.FC = () => {
   return (
-    <section className="py-20 overflow-hidden">
+    <section className="py-20 overflow-hidden relative">
+        <MeshGradient/>
       <div className="container px-4 mx-auto">
-        <motion.div
+      <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-block px-4 py-1 mb-4 text-sm font-semibold text-primary border border-primary/20 rounded-full"
+          >
+            OUR COMPETITOR
+          </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.2 }}
             className="text-3xl md:text-5xl font-bold mb-4"
           >
@@ -109,10 +121,11 @@ const CompetitorComparison: React.FC = () => {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="text-xl text-muted-foreground max-w-2xl mx-auto"
+            className="max-w-2xl mx-auto text-lg text-muted-foreground"
           >
-            See how we stack up against the competition and why we're the best choice for your project.
+             See how we stack up against the competition and why we're the best choice for your project.
           </motion.p>
         </motion.div>
 
