@@ -10,7 +10,7 @@ import { AnimatedButton } from './ui/animated-button'
 const avatars = [
     '/assets/memoji2.avif',
     '/assets/memoji1.avif',
-  '/assets/memoji3.avif'
+    '/assets/memoji3.avif'
 ]
 
 export const CTA = () => {
