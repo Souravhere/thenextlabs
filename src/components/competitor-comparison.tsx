@@ -7,10 +7,6 @@ import Image from 'next/image'
 import { MeshGradient } from './ui/mesh-gradient'
 import { AnimatedButton } from './ui/animated-button'
 
-interface Feature {
-  name: string;
-}
-
 interface Competitor {
   name: string;
   logo: string;
@@ -185,7 +181,7 @@ const CompetitorComparison: React.FC = () => {
               </h3>
               <p className="text-muted-foreground mb-4">
                 Experience the difference with our cutting-edge technology and dedicated team. 
-                We don't just meet expectations; we exceed them.
+                We don&#39;t just meet expectations; we exceed them.
               </p>
               {/* CTAs */}
           <motion.div
