@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, useAnimation } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { TestimonialCard } from './ui/testimonial-card'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { MeshGradient } from './ui/mesh-gradient'
