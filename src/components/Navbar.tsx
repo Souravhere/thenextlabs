@@ -10,10 +10,10 @@ import { AnimatedButton } from './ui/animated-button'
 
 const menuItems = [
   { title: 'Home', href: '/' },
-  { title: 'About', href: '/about' },
   { title: 'Services', href: '/services' },
-  { title: 'Team', href: '/team' },
-  { title: 'Contact', href: '/contact' },
+  { title: 'Projects', href: '/projects' },
+  { title: 'About Us', href: '/about' },
+//   { title: 'Component Library', href: '/contact' },
 ]
 
 const Navbar = () => {
@@ -81,7 +81,7 @@ const Navbar = () => {
                 ))}
               </div>
             </div>
-              <AnimatedButton href="/contact" variant="primary" className='h-10 sm:flex hidden items-center justify-center'>
+              <AnimatedButton href="/contact" variant="primary" className='h-10 sm:flex hidden items-center justify-center shadow-none'>
                Book a Call <ArrowUpRight className="w-6 h-6" />
             </AnimatedButton>
             <div className="md:hidden">
