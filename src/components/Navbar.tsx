@@ -76,7 +76,7 @@ const Navbar = () => {
   }
 
   return (
-    <>
+    <div className="fixed top-0 w-full flex justify-center z-50">
       <motion.nav
         initial="top"
         animate={isScrolled ? "scrolled" : "top"}
@@ -87,7 +87,7 @@ const Navbar = () => {
           stiffness: 200,
           damping: 25
         }}
-        className={`fixed top-0 left-1/2 -translate-x-1/2 z-50 max-w-[1580px] ${
+        className={`w-full max-w-[1580px] ${
           isScrolled 
             ? 'bg-gradient-to-r from-background/80 via-muted/50 to-background/80 backdrop-blur-xl shadow-lg shadow-primary/5 border border-muted/20' 
             : 'bg-transparent'
@@ -95,6 +95,7 @@ const Navbar = () => {
       >
         <div className="mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
+            {/* Rest of the navbar content remains the same */}
             {/* Logo */}
             <Link 
               href="/" 
@@ -103,8 +104,8 @@ const Navbar = () => {
               <Image 
                 src="/Logos/thenextlabs.svg" 
                 alt="The Next Labs" 
-                width={70} 
-                height={70} 
+                width={60} 
+                height={60} 
                 className="relative z-10"
               />
               <motion.div
@@ -160,7 +161,7 @@ const Navbar = () => {
             <AnimatedButton 
               href="/contact" 
               variant="primary" 
-              className='h-10 sm:flex hidden items-center justify-center'
+              className='h-10 sm:flex hidden items-center justify-center text-center'
             >
               Book a Call <ArrowUpRight className="w-5 h-5 ml-1" />
             </AnimatedButton>
@@ -251,7 +252,7 @@ const Navbar = () => {
                 <AnimatedButton 
                   href="/contact" 
                   variant="primary" 
-                  className='w-full justify-center'
+                  className='w-full flex justify-center items-center'
                 >
                   Book a Call <ArrowUpRight className="w-5 h-5 ml-1" />
                 </AnimatedButton>
@@ -260,9 +261,8 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   )
 }
 
 export default Navbar
-
