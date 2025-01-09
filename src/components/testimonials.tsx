@@ -1,9 +1,8 @@
 'use client'
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
+import { motion, useAnimation } from 'framer-motion'
 import { TestimonialCard } from './ui/testimonial-card'
-// import { Button } from '@/components/ui/button'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { MeshGradient } from './ui/mesh-gradient'
 
@@ -60,20 +59,67 @@ const testimonials = [
 
 export const Testimonials = () => {
   const [currentPage, setCurrentPage] = useState(0)
-  const testimonialsPerPage = 3
+  const [isAutoScrollPaused, setIsAutoScrollPaused] = useState(false)
+  const controls = useAnimation()
+  
+  // Adjust testimonials per page based on screen size
+  const getTestimonialsPerPage = () => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < 768 ? 1 : 3
+    }
+    return 3
+  }
+  
+  const [testimonialsPerPage, setTestimonialsPerPage] = useState(getTestimonialsPerPage())
   const totalPages = Math.ceil(testimonials.length / testimonialsPerPage)
 
+  // Handle window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setTestimonialsPerPage(getTestimonialsPerPage())
+    }
+    
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  // Auto-scroll functionality
+  useEffect(() => {
+    let interval: NodeJS.Timeout
+
+    if (!isAutoScrollPaused) {
+      interval = setInterval(() => {
+        setCurrentPage((prev) => (prev + 1) % totalPages)
+      }, 5000) // Change slide every 5 seconds
+    }
+
+    return () => clearInterval(interval)
+  }, [totalPages, isAutoScrollPaused])
+
   const nextPage = () => {
+    setIsAutoScrollPaused(true)
     setCurrentPage((prev) => (prev + 1) % totalPages)
+    // Resume auto-scroll after 5 seconds of inactivity
+    setTimeout(() => setIsAutoScrollPaused(false), 5000)
   }
 
   const prevPage = () => {
+    setIsAutoScrollPaused(true)
     setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages)
+    // Resume auto-scroll after 5 seconds of inactivity
+    setTimeout(() => setIsAutoScrollPaused(false), 5000)
+  }
+
+  const goToPage = (page: number) => {
+    setIsAutoScrollPaused(true)
+    setCurrentPage(page)
+    // Resume auto-scroll after 5 seconds of inactivity
+    setTimeout(() => setIsAutoScrollPaused(false), 5000)
   }
 
   return (
     <section className="py-10 overflow-hidden relative">
-        <MeshGradient/>
+      <MeshGradient/>
       <div className="container px-4 mx-auto">
         {/* Section Header */}
         <motion.div
@@ -111,8 +157,12 @@ export const Testimonials = () => {
           </motion.p>
         </motion.div>
 
-        {/* Testimonials Grid */}
-        <div className="relative">
+        {/* Testimonials Carousel */}
+        <div 
+          className="relative"
+          onMouseEnter={() => setIsAutoScrollPaused(true)}
+          onMouseLeave={() => setIsAutoScrollPaused(false)}
+        >
           <motion.div
             animate={{ x: `-${currentPage * 100}%` }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
@@ -133,19 +183,19 @@ export const Testimonials = () => {
 
           {/* Navigation */}
           <div className="flex justify-center items-center gap-4 mt-12">
-            <span
+            <button
               onClick={prevPage}
-              className="rounded-full border border-muted-foreground/30 p-3" 
+              className="rounded-full border border-muted-foreground/30 p-3 hover:bg-primary/10 transition-colors" 
             >
               <ChevronLeft className="w-4 h-4" />
-            </span>
+            </button>
 
             {/* Dots */}
             <div className="flex gap-2">
               {Array.from({ length: totalPages }).map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentPage(index)}
+                  onClick={() => goToPage(index)}
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
                     index === currentPage 
                       ? 'w-8 bg-primary' 
@@ -156,16 +206,15 @@ export const Testimonials = () => {
               ))}
             </div>
 
-            <span
+            <button
               onClick={nextPage}
-              className="rounded-full border border-muted-foreground/30 p-3" 
+              className="rounded-full border border-muted-foreground/30 p-3 hover:bg-primary/10 transition-colors" 
             >
               <ChevronRight className="w-4 h-4" />
-            </span>
+            </button>
           </div>
         </div>
       </div>
     </section>
   )
 }
-
