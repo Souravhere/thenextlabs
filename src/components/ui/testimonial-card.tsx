@@ -39,7 +39,7 @@ export const TestimonialCard = ({
         <div className="relative">
           {/* Profile */}
           <div className="flex items-center gap-4 mb-6">
-            <div className="relative w-14 h-14 rounded-full overflow-hidden">
+            <div className="relative w-14 h-14 bg-slate-300 rounded-full overflow-hidden">
               <Image
                 src={avatar}
                 alt={name}
