@@ -60,7 +60,7 @@ const testimonials = [
 export const Testimonials = () => {
   const [currentPage, setCurrentPage] = useState(0)
   const [isAutoScrollPaused, setIsAutoScrollPaused] = useState(false)
-  const controls = useAnimation()
+//   const controls = useAnimation()
   
   // Adjust testimonials per page based on screen size
   const getTestimonialsPerPage = () => {
@@ -90,7 +90,7 @@ export const Testimonials = () => {
     if (!isAutoScrollPaused) {
       interval = setInterval(() => {
         setCurrentPage((prev) => (prev + 1) % totalPages)
-      }, 5000) // Change slide every 5 seconds
+      }, 3000) // Change slide every 5 seconds
     }
 
     return () => clearInterval(interval)
