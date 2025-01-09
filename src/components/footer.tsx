@@ -2,7 +2,8 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Github, Twitter, Linkedin, Frame } from 'lucide-react'
+import { Github, Twitter, Linkedin } from 'lucide-react'
+import Image from 'next/image'
 
 const footerLinks = {
 //   Services: [
@@ -59,7 +60,7 @@ export const Footer = () => {
             className="space-y-4"
           >
             <Link href="/" className="flex items-center gap-2 text-xl font-bold">
-              <Frame className="w-6 h-6" />
+              <Image src="/Logos/thenextlabs.svg" alt="The Next Labs" width={30} height={30} />
               <span>The Next Labs</span>
             </Link>
             <p className="text-sm text-muted-foreground">
