@@ -59,8 +59,8 @@ export const Footer = () => {
             transition={{ duration: 0.5 }}
             className="space-y-4"
           >
-            <Link href="/" className="flex items-center gap-2 text-xl font-bold">
-              <Image src="/Logos/thenextlabs.svg" alt="The Next Labs" width={70} height={70} />
+            <Link href="/" className="flex items-center text-xl font-semibold">
+              <Image src="/Logos/thenextlabs.svg" alt="The Next Labs" width={50} height={50} />
               <span>The Next Labs</span>
             </Link>
             <p className="text-sm text-muted-foreground">
