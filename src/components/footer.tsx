@@ -42,7 +42,7 @@ export const Footer = () => {
   return (
     <footer className="relative overflow-hidden border-t border-muted/20">
       {/* Background Text */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none opacity-[0.02]">
+      <div className="absolute inset-0 sm:flex hidden items-center justify-center pointer-events-none select-none opacity-[0.02]">
         <span className="text-[18vw] font-bold tracking-tighter">
           NEXT LABS
         </span>
@@ -60,7 +60,7 @@ export const Footer = () => {
             className="space-y-4"
           >
             <Link href="/" className="flex items-center gap-2 text-xl font-bold">
-              <Image src="/Logos/thenextlabs.svg" alt="The Next Labs" width={30} height={30} />
+              <Image src="/Logos/thenextlabs.svg" alt="The Next Labs" width={70} height={70} />
               <span>The Next Labs</span>
             </Link>
             <p className="text-sm text-muted-foreground">

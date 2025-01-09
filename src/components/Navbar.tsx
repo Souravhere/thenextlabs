@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { ChartNoAxesColumn, X,ArrowUpRight } from 'lucide-react'
+import { BarChartIcon as ChartNoAxesColumn, X, ArrowUpRight } from 'lucide-react'
 import Image from 'next/image'
 import { AnimatedButton } from './ui/animated-button'
 
@@ -13,12 +13,12 @@ const menuItems = [
   { title: 'Services', href: '/services' },
   { title: 'Projects', href: '/projects' },
   { title: 'About Us', href: '/about' },
-//   { title: 'Component Library', href: '/contact' },
 ]
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -30,19 +30,49 @@ const Navbar = () => {
   }, [])
 
   const navbarVariants = {
-    top: { width: '100%', borderRadius: '0px' },
-    scrolled: { width: '90%', borderRadius: '9999px', marginTop: '10px' }
+    top: { 
+      width: '100%', 
+      borderRadius: '0px',
+      y: 0
+    },
+    scrolled: { 
+      width: '90%', 
+      borderRadius: '24px', 
+      y: 10,
+    }
   }
 
   const mobileMenuVariants = {
-    closed: { height: 0, opacity: 0 },
-    open: { height: 'auto', opacity: 1 }
+    closed: { 
+      height: 0, 
+      opacity: 0,
+      scale: 0.95
+    },
+    open: { 
+      height: 'auto', 
+      opacity: 1,
+      scale: 1
+    }
   }
 
   const linkVariants = {
-    initial: { y: -20, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
-    exit: { y: 20, opacity: 0 }
+    initial: { 
+      y: -20, 
+      opacity: 0 
+    },
+    animate: { 
+      y: 0, 
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 30
+      }
+    },
+    exit: { 
+      y: 20, 
+      opacity: 0 
+    }
   }
 
   return (
@@ -51,43 +81,97 @@ const Navbar = () => {
         initial="top"
         animate={isScrolled ? "scrolled" : "top"}
         variants={navbarVariants}
-        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ 
+          duration: 0.6, 
+          type: "spring",
+          stiffness: 200,
+          damping: 25
+        }}
         className={`fixed top-0 left-1/2 -translate-x-1/2 z-50 max-w-[1580px] ${
-          isScrolled ? 'backdrop-blur-md bg-black/50 shadow-lg' : 'bg-transparent'
+          isScrolled 
+            ? 'bg-gradient-to-r from-background/80 via-muted/50 to-background/80 backdrop-blur-xl shadow-lg shadow-primary/5 border border-muted/20' 
+            : 'bg-transparent'
         }`}
       >
         <div className="mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center transition-colors duration-300 hover:text-yellow-600">
-                <Image src="/Logos/thenextlabs.svg" alt="Yellow Labs" width={40} height={40} />
+            {/* Logo */}
+            <Link 
+              href="/" 
+              className="flex items-center transition-all duration-300 hover:scale-105"
+            >
+              <Image 
+                src="/Logos/thenextlabs.svg" 
+                alt="The Next Labs" 
+                width={70} 
+                height={70} 
+                className="relative z-10"
+              />
+              <motion.div
+                className="absolute w-12 h-12 bg-primary/20 rounded-full blur-xl"
+                animate={{
+                  scale: [1, 1.2, 1],
+                  opacity: [0.3, 0.5, 0.3]
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  repeatType: "reverse"
+                }}
+              />
             </Link>
+
+            {/* Desktop Menu */}
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-6">
                 {menuItems.map((item) => (
                   <Link
                     key={item.title}
                     href={item.href}
-                    className={`relative text-lg font-medium transition-colors duration-300 ${
-                      pathname === item.href
-                        ? 'text-yellow-400 border-b-2 border-yellow-400'
-                        : 'text-white hover:text-yellow-400'
-                    }`}
+                    className="relative px-3 py-2"
+                    onMouseEnter={() => setHoveredItem(item.title)}
+                    onMouseLeave={() => setHoveredItem(null)}
                   >
-                    {item.title}
-                    {pathname === item.href && (
-                      <span className="absolute inset-0 rounded-md bg-yellow-500 opacity-20 blur-lg"></span>
+                    <motion.span
+                      className={`relative z-10 text-lg font-medium ${
+                        pathname === item.href
+                          ? 'text-primary'
+                          : 'text-foreground hover:text-primary'
+                      }`}
+                    >
+                      {item.title}
+                    </motion.span>
+                    {(pathname === item.href || hoveredItem === item.title) && (
+                      <motion.span
+                        layoutId="navHighlight"
+                        className="absolute inset-0 bg-primary/10 rounded-xl -z-10"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                      />
                     )}
                   </Link>
                 ))}
               </div>
             </div>
-              <AnimatedButton href="/contact" variant="primary" className='h-10 sm:flex hidden items-center justify-center shadow-none'>
-               Book a Call <ArrowUpRight className="w-6 h-6" />
+
+            {/* CTA Button */}
+            <AnimatedButton 
+              href="/contact" 
+              variant="primary" 
+              className='h-10 sm:flex hidden items-center justify-center'
+            >
+              Book a Call <ArrowUpRight className="w-5 h-5 ml-1" />
             </AnimatedButton>
+
+            {/* Mobile Menu Button */}
             <div className="md:hidden">
-              <button
+              <motion.button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-yellow-500 focus:outline-none transition-colors duration-300"
+                className="inline-flex items-center justify-center p-2 rounded-xl bg-primary/10 hover:bg-primary/20 transition-colors duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <AnimatePresence mode="wait" initial={false}>
                   {isMobileMenuOpen ? (
@@ -96,9 +180,9 @@ const Navbar = () => {
                       initial={{ rotate: -90, opacity: 0 }}
                       animate={{ rotate: 0, opacity: 1 }}
                       exit={{ rotate: 90, opacity: 0 }}
-                      transition={{ duration: 0.2 }}
+                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     >
-                      <X className="block h-8 w-8" aria-hidden="true" />
+                      <X className="w-6 h-6 text-primary" />
                     </motion.div>
                   ) : (
                     <motion.div
@@ -106,19 +190,19 @@ const Navbar = () => {
                       initial={{ rotate: 90, opacity: 0 }}
                       animate={{ rotate: 0, opacity: 1 }}
                       exit={{ rotate: -90, opacity: 0 }}
-                      transition={{ duration: 0.2 }}
+                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
                     >
-                      <ChartNoAxesColumn className="block h-8 w-8 text-white -rotate-90" aria-hidden="true" />
+                      <ChartNoAxesColumn className="w-6 h-6 text-primary -rotate-90" />
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </button>
+              </motion.button>
             </div>
           </div>
         </div>
       </motion.nav>
 
-      {/* Mobile menu */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -126,8 +210,12 @@ const Navbar = () => {
             animate="open"
             exit="closed"
             variants={mobileMenuVariants}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="md:hidden fixed w-[90%] mx-auto rounded-lg mt-2 border border-yellow-400 inset-x-0 top-20 z-40 bg-black/95 backdrop-blur-md overflow-hidden"
+            transition={{ 
+              type: "spring",
+              stiffness: 300,
+              damping: 30
+            }}
+            className="md:hidden fixed w-[90%] mx-auto rounded-2xl mt-2 border border-primary/20 inset-x-0 top-20 z-40 bg-gradient-to-b from-background/95 to-muted/95 backdrop-blur-xl overflow-hidden shadow-xl shadow-primary/10"
           >
             <div className="px-4 pt-2 pb-3 space-y-1">
               {menuItems.map((item, index) => (
@@ -137,14 +225,14 @@ const Navbar = () => {
                   initial="initial"
                   animate="animate"
                   exit="exit"
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  transition={{ delay: index * 0.1 }}
                 >
                   <Link
                     href={item.href}
-                    className={`block px-3 py-4 rounded-md text-center text-xl font-medium transition-colors duration-300 ${
+                    className={`block px-4 py-3 rounded-xl text-center text-lg font-medium transition-all duration-300 ${
                       pathname === item.href
-                        ? 'text-yellow-500 bg-gray-800/40'
-                        : 'text-white hover:text-yellow-500 hover:bg-gray-800/60'
+                        ? 'text-primary bg-primary/10'
+                        : 'text-foreground hover:text-primary hover:bg-primary/5'
                     }`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -152,6 +240,22 @@ const Navbar = () => {
                   </Link>
                 </motion.div>
               ))}
+              <motion.div
+                variants={linkVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                transition={{ delay: menuItems.length * 0.1 }}
+                className="pt-2"
+              >
+                <AnimatedButton 
+                  href="/contact" 
+                  variant="primary" 
+                  className='w-full justify-center'
+                >
+                  Book a Call <ArrowUpRight className="w-5 h-5 ml-1" />
+                </AnimatedButton>
+              </motion.div>
             </div>
           </motion.div>
         )}
@@ -161,3 +265,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+
