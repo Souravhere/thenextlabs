@@ -47,7 +47,7 @@ const competitors: Competitor[] = [
   }
 ]
 
-const FeatureRow: React.FC<FeatureRowProps> = ({ feature, index, theNextLabs, competitors }) => {
+const FeatureRow: React.FC<FeatureRowProps> = ({ feature, index, competitors }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -122,7 +122,7 @@ const CompetitorComparison: React.FC = () => {
             transition={{ delay: 0.3 }}
             className="max-w-2xl mx-auto text-lg text-muted-foreground"
           >
-             See how we stack up against the competition and why we're the best choice for your project.
+             See how we stack up against the competition and why we&#39;re the best choice for your project.
           </motion.p>
         </motion.div>
 
