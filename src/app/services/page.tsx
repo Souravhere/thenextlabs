@@ -1,3 +1,4 @@
+import CompetitorComparison from '@/src/components/competitor-comparison'
 import { CTA } from '@/src/components/cta'
 import { ServicesGrid } from '@/src/components/services-grid'
 import { CTAPage } from '@/src/components/servicescomps/services-cta'
@@ -11,9 +12,10 @@ function page() {
     <div className='h-fit relative'>
         <MeshGradient/>
         <div>
-        <ServicesHero/>
-        <ServicesGridPage/>
-        <CTAPage/>
+            <ServicesHero/>
+            <ServicesGridPage/>
+            <CompetitorComparison/>
+            <CTAPage/>
         </div>
     </div>
   )
