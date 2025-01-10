@@ -9,20 +9,20 @@ import { MeshGradient } from '@/src/components/ui/mesh-gradient'
 
 const projects = [
   {
-    title: "AI-Powered Analytics Dashboard",
-    description: "Modern analytics platform with real-time data visualization and AI insights.",
-    image: "/placeholder.svg?height=400&width=600",
-    tags: ["Next.js", "React", "TailwindCSS", "AI"],
+    title: "Yellow Labs",
+    description: "Yellow Labs is a leading Web3 consulting firm specializing in blockchain, cryptocurrency, and digital innovation.",
+    image: "/projects/yellow-labs.png",
+    tags: ["Next.js", "TailwindCSS", "Framer Motion", "Figma"],
     category: "SaaS",
-    link: "/projects/analytics-dashboard"
+    link: "https://yellowlabs.vercel.app/"
   },
   {
-    title: "Crypto Trading Platform",
-    description: "Secure cryptocurrency trading platform with advanced charting capabilities.",
-    image: "/placeholder.svg?height=400&width=600",
-    tags: ["React", "Web3", "Framer Motion"],
+    title: "Space Things",
+    description: "Space Things optimizes business environments and improves customer experience by providing advanced technology solutions.",
+    image: "/projects/spacethings.png",
+    tags: ["Next.js", "TailwindCSS", "Framer Motion"],
     category: "Crypto",
-    link: "/projects/crypto-platform"
+    link: "https://spacethings.vercel.app/"
   },
   {
     title: "E-Learning Management System",
@@ -58,7 +58,7 @@ const projects = [
   }
 ]
 
-const categories = ["All", "SaaS", "Crypto", "Education", "Healthcare", "E-commerce"]
+const categories = ["All", "SaaS", "Crypto", "Tools", "Agency"]
 
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState("All")
