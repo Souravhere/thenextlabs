@@ -52,6 +52,7 @@ const FeatureRow: React.FC<FeatureRowProps> = ({ feature, index, competitors }) 
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="grid grid-cols-4 gap-4 py-4 border-b border-muted/20 items-center"
     >
@@ -134,6 +135,7 @@ const CompetitorComparison: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="relative bg-background/50 backdrop-blur-xl rounded-3xl border border-muted/20 shadow-xl p-6 md:p-10 overflow-hidden"
           >
@@ -172,6 +174,7 @@ const CompetitorComparison: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5 }}
               className="mt-10 p-6 bg-muted/30 rounded-xl border border-muted/20"
             >
