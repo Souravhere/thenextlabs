@@ -2,7 +2,8 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
+import { AnimatedButton } from '../ui/animated-button'
 
 const ServicesHero = () => {
   return (
@@ -20,13 +21,17 @@ const ServicesHero = () => {
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Elevate your digital presence with our cutting-edge web solutions
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 bg-primary text-primary-foreground rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-shadow inline-flex items-center"
+          {/* CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0, duration: 0.8 }}
+            className="flex flex-wrap gap-6 justify-center px-2"
           >
-            Explore Services <ArrowRight className="ml-2 w-5 h-5" />
-          </motion.button>
+            <AnimatedButton href="/contact" variant="primary">
+               Book a Call <ArrowUpRight className="w-6 h-6" />
+            </AnimatedButton>
+          </motion.div>
         </motion.div>
       </div>
       
