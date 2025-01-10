@@ -5,7 +5,7 @@ import ServicesHero from '@/src/components/servicescomps/services-hero'
 import { MeshGradient } from '@/src/components/ui/mesh-gradient'
 import React from 'react'
 
-function page() {
+function Servicespage() {
   return (
     <div className='h-fit relative'>
         <MeshGradient/>
@@ -19,4 +19,4 @@ function page() {
   )
 }
 
-export default page
+export default Servicespage;
