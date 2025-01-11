@@ -6,27 +6,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
 import { Phone, Mail, Clock, Loader2 } from 'lucide-react'
-
-const contactInfo = [
-  {
-    icon: <Phone className="w-6 h-6" />,
-    title: "Phone",
-    details: "+1 (555) 123-4567",
-    subtitle: "Mon-Fri 9am-6pm IST"
-  },
-  {
-    icon: <Mail className="w-6 h-6" />,
-    title: "Email",
-    details: "hello@thenextlabs.com",
-    subtitle: "Online support"
-  },
-  {
-    icon: <Clock className="w-6 h-6" />,
-    title: "Working Hours",
-    details: "Monday - Friday",
-    subtitle: "9:00 AM - 6:00 PM IST"
-  }
-]
+import { MeshGradient } from '@/src/components/ui/mesh-gradient'
 
 const contactFormSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -130,7 +110,8 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen py-20 bg-[#0a0a0a] text-white">
+    <div className="min-h-screen py-20 relative">
+        <MeshGradient/>
       <div className="container px-4 mx-auto mb-20">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <motion.h1
@@ -149,26 +130,6 @@ export default function ContactPage() {
           >
             Have a project in mind? We'd love to discuss how we can help bring your vision to life.
           </motion.p>
-        </div>
-
-        {/* Contact Info Cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-20">
-          {contactInfo.map((info, index) => (
-            <motion.div
-              key={info.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="p-6 rounded-2xl border border-gray-800 bg-gray-900 bg-opacity-50 backdrop-blur-sm text-center"
-            >
-              <div className="w-12 h-12 rounded-full bg-[#3a86ff] bg-opacity-10 text-[#3a86ff] flex items-center justify-center mx-auto mb-4">
-                {info.icon}
-              </div>
-              <h3 className="text-lg font-semibold mb-2">{info.title}</h3>
-              <p className="text-[#3a86ff] font-medium mb-1">{info.details}</p>
-              <p className="text-sm text-gray-400">{info.subtitle}</p>
-            </motion.div>
-          ))}
         </div>
 
         {/* Contact Forms */}
