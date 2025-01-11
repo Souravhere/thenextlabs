@@ -1,5 +1,6 @@
 'use client'
 
+import CompetitorComparison from '@/src/components/competitor-comparison'
 import { BookCallForm } from '@/src/components/contactcomps/book-call-form'
 import { ContactForm } from '@/src/components/contactcomps/contact-form'
 import { MeshGradient } from '@/src/components/ui/mesh-gradient'
@@ -31,7 +32,7 @@ export default function ContactPage() {
               transition={{ delay: 0.3 }}
               className="text-4xl md:text-6xl font-bold mb-6"
             >
-              Let's Build Something Amazing Together
+              Let&#39;s Build Something Amazing Together
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -39,7 +40,7 @@ export default function ContactPage() {
               transition={{ delay: 0.4 }}
               className="text-lg text-muted-foreground"
             >
-              Have a project in mind? We'd love to discuss how we can help bring your vision to life.
+              Have a project in mind? We&#39;d love to discuss how we can help bring your vision to life.
             </motion.p>
           </motion.div>
         </div>
@@ -66,6 +67,7 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </div>
+      <CompetitorComparison/>
     </div>
   )
 }

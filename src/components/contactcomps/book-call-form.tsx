@@ -189,7 +189,7 @@ export const BookCallForm = () => {
           animate={{ opacity: 1 }}
           className="text-green-500 text-sm mt-2 text-center"
         >
-          Thank you for your interest. We'll contact you soon to schedule a call!
+          Thank you for your interest. We&#39;ll contact you soon to schedule a call!
         </motion.p>
       )}
       {submitStatus === 'error' && (

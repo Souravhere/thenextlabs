@@ -117,7 +117,7 @@ export const ContactForm = () => {
           animate={{ opacity: 1 }}
           className="text-green-500 text-sm mt-2 text-center"
         >
-          Thank you for your message. We'll get back to you soon!
+          Thank you for your message. We&#39;ll get back to you soon!
         </motion.p>
       )}
       {submitStatus === 'error' && (
