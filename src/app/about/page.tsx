@@ -10,7 +10,7 @@ import { Lightbulb, Code, Palette, Rocket, CheckCircle } from 'lucide-react'
 const founderInfo = {
   name: "Sourav Chhimpa",
   title: "Founder & Lead Developer",
-  image: "/placeholder.svg?height=600&width=400",
+  image: "/assets/sourav.jpg",
   expertise: [
     "Web Designer",
     "3+ years Experience",
@@ -26,7 +26,7 @@ const founderInfo = {
 
 const achievements = [
   {
-    title: "100+ Projects",
+    title: "50+ Projects",
     description: "Successfully delivered websites across various industries"
   },
   {
