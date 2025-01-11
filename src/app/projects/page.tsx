@@ -64,6 +64,22 @@ const projects = [
       category: "Tools",
       link: "https://facevibe.vercel.app/"
     },
+    {
+      title: "Face Vibe",
+      description: "At Face Vibe, our goal is to explore the capabilities of face-api.js and discover the amazing projects that can be built with user interaction.",
+      image: "/projects/facevibe.png",
+      tags: ["React", "Face-API.js", "Framer Motion","particles.js"],
+      category: "Tools",
+      link: "https://facevibe.vercel.app/"
+    },
+    {
+      title: "Face Vibe",
+      description: "At Face Vibe, our goal is to explore the capabilities of face-api.js and discover the amazing projects that can be built with user interaction.",
+      image: "/projects/facevibe.png",
+      tags: ["React", "Face-API.js", "Framer Motion","particles.js"],
+      category: "Tools",
+      link: "https://facevibe.vercel.app/"
+    },
 ]
 
 const categories = ["All", "SaaS", "Crypto", "Tools", "Agency"]
