@@ -26,8 +26,8 @@ const bookingFormSchema = z.object({
   requirements: z.array(z.string()).min(1, 'Please select at least one requirement'),
 })
 
-const projectTypes = ['Landing Page', 'Corporate Website', 'Web Application', 'E-commerce', 'Other']
-const budgetRanges = ['$5,000 - $10,000', '$10,000 - $20,000', '$20,000 - $50,000', '$50,000+']
+const projectTypes = ['Landing Page', 'Corporate Website', 'Product Page', 'Other']
+const budgetRanges = ['$300 - $500', '$600 - $1,000', '$1,100 - $1,500', '$2,000+']
 const timelines = ['1-2 weeks', '2-4 weeks', '1-2 months', '2+ months']
 const requirements = [
   { id: 'responsive', label: 'Responsive Design' },
