@@ -135,7 +135,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-20">
+      <section>
         <div className="container px-4 mx-auto">
           {/* Filter Buttons */}
           <motion.div
