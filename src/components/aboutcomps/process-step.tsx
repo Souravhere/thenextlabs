@@ -9,7 +9,7 @@ interface ProcessStepProps {
   icon: React.ReactNode
 }
 
-export const ProcessStep = ({ step, title, description, icon }: ProcessStepProps) => {
+export const ProcessStep = ({ title, description, icon }: ProcessStepProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
