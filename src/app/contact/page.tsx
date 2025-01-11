@@ -5,9 +5,10 @@ import { motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
-import { Phone, Mail, Clock, Loader2 } from 'lucide-react'
+import { Loader2 } from 'lucide-react'
 import { MeshGradient } from '@/src/components/ui/mesh-gradient'
 
+// Schema definitions for form validation using Zod
 const contactFormSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
   email: z.string().email('Invalid email address'),
@@ -26,22 +27,11 @@ const bookingFormSchema = z.object({
   requirements: z.array(z.string()).min(1, 'Please select at least one requirement'),
 })
 
-const projectTypes = ['Landing Page', 'Corporate Website', 'Product Page', 'Other']
-const budgetRanges = ['$300 - $500', '$600 - $1,000', '$1,100 - $1,500', '$2,000+']
-const timelines = ['1-2 weeks', '2-4 weeks', '1-2 months', '2+ months']
-const requirements = [
-  { id: 'responsive', label: 'Responsive Design' },
-  { id: 'animations', label: 'Custom Animations' },
-  { id: 'cms', label: 'Content Management System' },
-  { id: 'seo', label: 'SEO Optimization' },
-  { id: 'analytics', label: 'Analytics Integration' },
-  { id: 'maintenance', label: 'Maintenance & Support' },
-]
-
 export default function ContactPage() {
   const [activeTab, setActiveTab] = useState('contact')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
+  const [formError, setFormError] = useState('') // Added state to handle submission errors
 
   const contactForm = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
@@ -67,46 +57,52 @@ export default function ContactPage() {
     },
   })
 
+  // Form submission handler for Contact form
   const onSubmitContact = async (values: z.infer<typeof contactFormSchema>) => {
     setIsSubmitting(true)
+    setFormError('')
     try {
-      const response = await fetch('https://formspree.io/f/your-form-id', {
+      const response = await fetch('https://formspree.io/f/xovvynro', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(values),
       })
-      
+
       if (response.ok) {
         setIsSuccess(true)
         contactForm.reset()
+      } else {
+        setFormError('Failed to submit the form. Please try again later.')
       }
     } catch (error) {
-      console.error('Error submitting form:', error)
+      setFormError('An unexpected error occurred. Please try again.')
+    } finally {
+      setIsSubmitting(false)
     }
-    setIsSubmitting(false)
   }
 
+  // Form submission handler for Booking form
   const onSubmitBooking = async (values: z.infer<typeof bookingFormSchema>) => {
     setIsSubmitting(true)
+    setFormError('')
     try {
-      const response = await fetch('https://formspree.io/f/your-form-id', {
+      const response = await fetch('https://formspree.io/f/xovvynro', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(values),
       })
-      
+
       if (response.ok) {
         setIsSuccess(true)
         bookingForm.reset()
+      } else {
+        setFormError('Failed to submit the form. Please try again later.')
       }
     } catch (error) {
-      console.error('Error submitting form:', error)
+      setFormError('An unexpected error occurred. Please try again.')
+    } finally {
+      setIsSubmitting(false)
     }
-    setIsSubmitting(false)
   }
 
   return (
@@ -400,4 +396,3 @@ export default function ContactPage() {
     </div>
   )
 }
-
