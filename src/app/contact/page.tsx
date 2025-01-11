@@ -112,26 +112,40 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen py-20 relative">
         <MeshGradient/>
+      <div className="container mx-auto">
       <div className="container px-4 mx-auto mb-20">
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#3a86ff] via-[#ff006e] to-[#fb5607] text-transparent bg-clip-text"
+            className="text-center max-w-3xl mx-auto"
           >
-            Let's Build Something Amazing Together
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg text-gray-300"
-          >
-            Have a project in mind? We'd love to discuss how we can help bring your vision to life.
-          </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="inline-block px-3 py-1 mb-4 text-sm font-semibold text-primary border border-primary/20 rounded-full"
+            >
+              CONTACT US
+            </motion.div>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="text-4xl md:text-6xl font-bold mb-6"
+            >
+              Let's Build Something Amazing Together
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="text-lg text-muted-foreground"
+            >
+             Have a project in mind? We'd love to discuss how we can help bring your vision to life.
+            </motion.p>
+          </motion.div>
         </div>
-
         {/* Contact Forms */}
         <div className="w-full max-w-4xl mx-auto">
           <div className="flex justify-center mb-8">
