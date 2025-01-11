@@ -13,7 +13,7 @@ const projects = [
     description: "Yellow Labs is a leading Web3 consulting firm specializing in blockchain, cryptocurrency, and digital innovation.",
     image: "/projects/yellow-labs.png",
     tags: ["Next.js", "TailwindCSS", "Framer Motion", "Figma"],
-    category: "SaaS",
+    category: "Agency",
     link: "https://yellowlabs.vercel.app/"
   },
   {
@@ -21,7 +21,7 @@ const projects = [
     description: "Space Things optimizes business environments and improves customer experience by providing advanced technology solutions.",
     image: "/projects/spacethings.png",
     tags: ["Next.js", "TailwindCSS", "Framer Motion"],
-    category: "Crypto",
+    category: "SaaS",
     link: "https://spacethings.vercel.app/"
   },
   {
@@ -29,40 +29,40 @@ const projects = [
     description: "Join the EAGLES revolution! Soar high with the meme coin that combines community, fun, and financial freedom on Solana.",
     image: "/projects/eagles.png",
     tags: ["Next.js", "Figma", "TailwindCSS"],
-    category: "Education",
-    link: "/projects/lms"
+    category: "Crypto",
+    link: "https://eagles.wtf/"
   },
   {
     title: "Hash Pet",
     description: "Next-generation digital WEB3.0 platform beyond providing simple existing services.",
     image: "/projects/hashpet.png",
-    tags: ["React", "Node.js", "MongoDB"],
-    category: "Healthcare",
-    link: "https://hashpet.vercel.app/"
+    tags: ["React", "Framer Motion", "Figma"],
+    category: "Crypto",
+    link: "https://www.hashpet.io/"
   },
   {
-      title: "E-commerce Product Showcase",
-      description: "Dynamic product catalog with 3D product visualization and AR preview.",
+      title: "Hflag",
+      description: "Discover a global marketplace for halal-certified products, built on transparency, innovation, and ethical choices.",
       image: "/projects/hflag.png",
-      tags: ["Three.js", "Next.js", "WebGL"],
-      category: "E-commerce",
-      link: "/projects/product-showcase"
+      tags: ["React", "Framer Motion", "Figma"],
+      category: "Crypto",
+      link: "https://www.hflag.io/"
     },
     {
-        title: "Social Media Analytics Tool",
-        description: "Comprehensive social media management and analytics platform.",
+        title: "Veggie Smart",
+        description: "A tool to calculate vegetable prices, recipe costs, and more. Updated regularly with new features.",
         image: "/projects/veggiesmart.png",
-        tags: ["React", "Python", "Data Analysis"],
-        category: "SaaS",
-        link: "/projects/social-analytics"
+        tags: ["JS", "Three js", "Pdf.js","SEO"],
+        category: "Tools",
+        link: "https://souravhere.github.io/Veggie-Smart/"
     },
     {
-      title: "E-commerc",
-      description: "Dynamic product catalog with 3D product visualization and AR preview.",
+      title: "Face Vibe",
+      description: "At Face Vibe, our goal is to explore the capabilities of face-api.js and discover the amazing projects that can be built with user interaction.",
       image: "/projects/facevibe.png",
-      tags: ["Three.js", "Next.js", "WebGL"],
-      category: "E-commerce",
-      link: "/projects/product-showcase"
+      tags: ["React", "Face-API.js", "Framer Motion","particles.js"],
+      category: "Tools",
+      link: "https://facevibe.vercel.app/"
     },
 ]
 
