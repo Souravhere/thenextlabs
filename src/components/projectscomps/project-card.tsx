@@ -30,7 +30,7 @@ export const ProjectCard = ({
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="group relative"
     >
-      <Link href={link} className="block">
+      <Link href={link} target='_blank' className="block">
         <div className="relative overflow-hidden rounded-xl bg-muted/5 border border-muted/20 backdrop-blur-sm">
           {/* Image */}
           <div className="relative aspect-[16/9] overflow-hidden">
