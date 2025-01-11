@@ -18,14 +18,13 @@ interface FounderProfileProps {
 
 export const FounderProfile = ({
   name,
-  title,
   image,
   bio,
   expertise,
   socialLinks
 }: FounderProfileProps) => {
   return (
-    <div className="grid md:grid-cols-2 gap-12 items-center">
+    <div className="grid md:grid-cols-2 gap-12 items-center border p-3 rounded-2xl border-muted/10">
       {/* Image Section */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
