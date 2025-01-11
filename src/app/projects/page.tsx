@@ -25,37 +25,45 @@ const projects = [
     link: "https://spacethings.vercel.app/"
   },
   {
-    title: "E-Learning Management System",
-    description: "Comprehensive learning platform with interactive courses and progress tracking.",
-    image: "/placeholder.svg?height=400&width=600",
-    tags: ["Next.js", "PostgreSQL", "TailwindCSS"],
+    title: "Eagles",
+    description: "Join the EAGLES revolution! Soar high with the meme coin that combines community, fun, and financial freedom on Solana.",
+    image: "/projects/eagles.png",
+    tags: ["Next.js", "Figma", "TailwindCSS"],
     category: "Education",
     link: "/projects/lms"
   },
   {
-    title: "Healthcare Patient Portal",
-    description: "Secure patient management system with appointment scheduling and records.",
-    image: "/placeholder.svg?height=400&width=600",
+    title: "Hash Pet",
+    description: "Next-generation digital WEB3.0 platform beyond providing simple existing services.",
+    image: "/projects/hashpet.png",
     tags: ["React", "Node.js", "MongoDB"],
     category: "Healthcare",
-    link: "/projects/patient-portal"
+    link: "https://hashpet.vercel.app/"
   },
   {
-    title: "E-commerce Product Showcase",
-    description: "Dynamic product catalog with 3D product visualization and AR preview.",
-    image: "/placeholder.svg?height=400&width=600",
-    tags: ["Three.js", "Next.js", "WebGL"],
-    category: "E-commerce",
-    link: "/projects/product-showcase"
-  },
-  {
-    title: "Social Media Analytics Tool",
-    description: "Comprehensive social media management and analytics platform.",
-    image: "/placeholder.svg?height=400&width=600",
-    tags: ["React", "Python", "Data Analysis"],
-    category: "SaaS",
-    link: "/projects/social-analytics"
-  }
+      title: "E-commerce Product Showcase",
+      description: "Dynamic product catalog with 3D product visualization and AR preview.",
+      image: "/projects/hflag.png",
+      tags: ["Three.js", "Next.js", "WebGL"],
+      category: "E-commerce",
+      link: "/projects/product-showcase"
+    },
+    {
+        title: "Social Media Analytics Tool",
+        description: "Comprehensive social media management and analytics platform.",
+        image: "/projects/veggiesmart.png",
+        tags: ["React", "Python", "Data Analysis"],
+        category: "SaaS",
+        link: "/projects/social-analytics"
+    },
+    {
+      title: "E-commerc",
+      description: "Dynamic product catalog with 3D product visualization and AR preview.",
+      image: "/projects/facevibe.png",
+      tags: ["Three.js", "Next.js", "WebGL"],
+      category: "E-commerce",
+      link: "/projects/product-showcase"
+    },
 ]
 
 const categories = ["All", "SaaS", "Crypto", "Tools", "Agency"]
