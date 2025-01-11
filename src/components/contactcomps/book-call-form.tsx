@@ -112,9 +112,9 @@ export const BookCallForm = () => {
           className="w-full px-4 py-3 rounded-md bg-muted/10 border border-muted focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200"
         >
           <option value="">Select a project type</option>
-          <option value="website">Website Development</option>
-          <option value="webapp">Web Application</option>
-          <option value="ecommerce">E-commerce Solution</option>
+          <option value="website">Landing Pages</option>
+          <option value="webapp">Crypto & Web3 Web</option>
+          <option value="ecommerce">Product Showcases</option>
           <option value="other">Other</option>
         </select>
       </div>
@@ -127,10 +127,10 @@ export const BookCallForm = () => {
           className="w-full px-4 py-3 rounded-md bg-muted/10 border border-muted focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200"
         >
           <option value="">Select a budget range</option>
-          <option value="0-5000">$0 - $5,000</option>
-          <option value="5000-10000">$5,000 - $10,000</option>
-          <option value="10000-20000">$10,000 - $20,000</option>
-          <option value="20000+">$20,000+</option>
+          <option value="0-5000">$100 - $500</option>
+          <option value="5000-10000">$500 - $1,000</option>
+          <option value="10000-20000">$1,000 - $1,500</option>
+          <option value="20000+">$2,000+</option>
         </select>
       </div>
       <div>
@@ -142,9 +142,9 @@ export const BookCallForm = () => {
           className="w-full px-4 py-3 rounded-md bg-muted/10 border border-muted focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200"
         >
           <option value="">Select timeline</option>
-          <option value="1-2months">1-2 months</option>
-          <option value="3-6months">3-6 months</option>
-          <option value="6+months">6+ months</option>
+          <option value="1-2months">1-2 Weeks</option>
+          <option value="3-6months">3-6 Weeks</option>
+          <option value="6+months">6+ Weeks</option>
         </select>
       </div>
       <div>
