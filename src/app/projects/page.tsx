@@ -57,20 +57,20 @@ const projects = [
         link: "https://souravhere.github.io/Veggie-Smart/"
     },
     {
-      title: "Face Vibe",
-      description: "At Face Vibe, our goal is to explore the capabilities of face-api.js and discover the amazing projects that can be built with user interaction.",
-      image: "/projects/facevibe.png",
-      tags: ["React", "Face-API.js", "Framer Motion","particles.js"],
-      category: "Tools",
-      link: "https://facevibe.vercel.app/"
+      title: "Byyte Digital",
+      description: "At Byyte Digital, we craft visually stunning websites, captivating designs, and data-driven marketing strategies to elevate your brand.",
+      image: "/projects/byyte.png",
+      tags: ["React", "Framer Motion","React Router"],
+      category: "Agency",
+      link: "https://www.byyte.in/"
     },
     {
-      title: "Face Vibe",
-      description: "At Face Vibe, our goal is to explore the capabilities of face-api.js and discover the amazing projects that can be built with user interaction.",
-      image: "/projects/facevibe.png",
-      tags: ["React", "Face-API.js", "Framer Motion","particles.js"],
+      title: " EZ Module",
+      description: "EZModule is a versatile and open-source React component library, offering reusable UI and feature components for developers seeking to enhance their web projects efficiently.",
+      image: "/projects/ezmodule.png",
+      tags: ["React", "Framer Motion","npm"],
       category: "Tools",
-      link: "https://facevibe.vercel.app/"
+      link: "https://ez-modules.vercel.app"
     },
     {
       title: "Face Vibe",
