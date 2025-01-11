@@ -5,6 +5,8 @@ import { motion } from 'framer-motion'
 import { ProjectCard } from '@/src/components/projectscomps/project-card'
 import { FilterButton } from '@/src/components/projectscomps/filter-button'
 import { MeshGradient } from '@/src/components/ui/mesh-gradient'
+import { CTAPage } from '@/src/components/servicescomps/services-cta'
+import { Testimonials } from '@/src/components/testimonials'
 
 
 const projects = [
@@ -167,6 +169,8 @@ export default function ProjectsPage() {
           </motion.div>
         </div>
       </section>
+      <Testimonials/>
+      <CTAPage/>
     </div>
   )
 }
