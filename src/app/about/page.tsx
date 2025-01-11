@@ -2,6 +2,8 @@
 
 import { FounderProfile } from '@/src/components/aboutcomps/founder-profile'
 import { ProcessStep } from '@/src/components/aboutcomps/process-step'
+import CompetitorComparison from '@/src/components/competitor-comparison'
+import { Process } from '@/src/components/process'
 import { CTAPage } from '@/src/components/servicescomps/services-cta'
 import { MeshGradient } from '@/src/components/ui/mesh-gradient'
 import { motion } from 'framer-motion'
@@ -131,6 +133,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      <Process/>
 
       {/* Meet Our Founder Section */}
       <section className="py-20">
@@ -138,7 +141,7 @@ export default function AboutPage() {
           <FounderProfile {...founderInfo} />
         </div>
       </section>
-
+      <CompetitorComparison/>
       {/* Our Process Section */}
       <section className="py-20 bg-muted/5">
         <div className="container px-4 mx-auto">
