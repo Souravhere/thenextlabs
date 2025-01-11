@@ -2,16 +2,10 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Github, Twitter, Linkedin } from 'lucide-react'
+import { Github, Linkedin } from 'lucide-react'
 import Image from 'next/image'
 
 const footerLinks = {
-//   Services: [
-//     { name: 'Web Development', href: '/services/web-development' },
-//     { name: 'UI/UX Design', href: '/services/design' },
-//     { name: 'Animations', href: '/services/animations' },
-//     { name: 'Consulting', href: '/services/consulting' },
-//   ],
   Company: [
     { name: 'About Us', href: '/about' },
     { name: 'Blog', href: '/blog' },
@@ -27,14 +21,16 @@ const footerLinks = {
   Legal: [
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
-    // { name: 'Cookie Policy', href: '/cookies' },
-    // { name: 'License', href: '/license' },
   ],
 }
 
 const socialLinks = [
   { name: 'GitHub', icon: Github, href: 'https://github.com' },
-  { name: 'Twitter', icon: Twitter, href: 'https://twitter.com' },
+  { 
+    name: 'X', 
+    icon: () => <span className="text-2xl block font-bold -mt-1">𝕏</span>,
+    href: 'https://twitter.com' 
+  },
   { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com' },
 ]
 
@@ -141,4 +137,3 @@ export const Footer = () => {
     </footer>
   )
 }
-
