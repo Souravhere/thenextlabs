@@ -10,9 +10,9 @@ import { AnimatedButton } from './ui/animated-button'
 
 const menuItems = [
   { title: 'Home', href: '/' },
+  { title: 'About Us', href: '/about' },
   { title: 'Projects', href: '/projects' },
   { title: 'Services', href: '/services' },
-  { title: 'About Us', href: '/about' },
 ]
 
 const Navbar = () => {
