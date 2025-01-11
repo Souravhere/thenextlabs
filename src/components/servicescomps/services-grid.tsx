@@ -23,7 +23,7 @@ const services = [
 
 export const ServicesGridPage = () => {
   return (
-    <section className="py-16 relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden">
       <div className="container px-4 mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
