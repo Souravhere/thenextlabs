@@ -7,7 +7,7 @@ import { Process } from '@/src/components/process'
 import { CTAPage } from '@/src/components/servicescomps/services-cta'
 import { MeshGradient } from '@/src/components/ui/mesh-gradient'
 import { motion } from 'framer-motion'
-import { Lightbulb, Code, Palette, Rocket, CheckCircle } from 'lucide-react'
+import { Lightbulb, Code, Palette, Rocket } from 'lucide-react'
 
 const founderInfo = {
   name: "Sourav Chhimpa",
@@ -103,7 +103,7 @@ export default function AboutPage() {
               transition={{ delay: 0.4 }}
               className="text-lg text-muted-foreground"
             >
-              We're a creative web development studio specializing in animated websites for modern businesses. Our mission is to transform your digital presence with cutting-edge technology and stunning design.
+              We&#39;re a creative web development studio specializing in animated websites for modern businesses. Our mission is to transform your digital presence with cutting-edge technology and stunning design.
             </motion.p>
           </motion.div>
         </div>
