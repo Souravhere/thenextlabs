@@ -1,4 +1,5 @@
 
+import CalBooking from "../components/cal-booking";
 import CompetitorComparison from "../components/competitor-comparison";
 import { CTA } from "../components/cta";
 import { FAQSection } from "../components/faq-section";
@@ -17,6 +18,7 @@ export default function Home() {
       <ServicesGrid/>
       <Process/>
       <ProjectGrid/>
+      <CalBooking/>
       <Testimonials/>
       <CompetitorComparison/>
       <FAQSection/>

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Calendar, Video, Users, Clock } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { MeshGradient } from './ui/mesh-gradient'
 
 const features = [
   {
@@ -55,10 +56,7 @@ const item = {
 export default function CalBooking() {
   return (
     <section className="py-20 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background to-background/50" />
-      <div className="absolute inset-0 bg-grid-white/[0.02] bg-grid" />
-      
+      <MeshGradient/>
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           variants={container}
@@ -71,7 +69,7 @@ export default function CalBooking() {
             variants={item}
             className="inline-block px-3 py-1 mb-4 text-sm font-semibold text-primary border border-primary/20 rounded-full"
           >
-            SCHEDULE A MEETING
+            CAL.COM
           </motion.div>
           <motion.h2
             variants={item}
@@ -123,41 +121,6 @@ export default function CalBooking() {
               <p className="text-muted-foreground">{feature.description}</p>
             </motion.div>
           ))}
-        </motion.div>
-
-        {/* Integrations */}
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <motion.h3
-            variants={item}
-            className="text-xl font-semibold mb-8"
-          >
-            Seamlessly Integrates With Your Tools
-          </motion.h3>
-          <motion.div
-            variants={item}
-            className="flex flex-wrap justify-center gap-8"
-          >
-            {integrations.map((integration) => (
-              <motion.div
-                key={integration.name}
-                whileHover={{ scale: 1.1 }}
-                className="relative w-10 h-10 grayscale hover:grayscale-0 transition-all duration-200"
-              >
-                <Image
-                  src={integration.logo}
-                  alt={integration.name}
-                  fill
-                  className="object-contain"
-                />
-              </motion.div>
-            ))}
-          </motion.div>
         </motion.div>
       </div>
     </section>
