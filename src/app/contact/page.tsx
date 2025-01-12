@@ -59,7 +59,7 @@ export default function ContactPage() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="mt-12 bg-muted/5 backdrop-blur-sm rounded-lg p-8 border border-muted/20 max-w-3xl mx-auto"
+          className="mt-12 bg-muted/5 backdrop-blur-sm rounded-lg p-8 border border-muted/20 max-w-6xl mx-auto"
         >
           <Tabs tabs={tabs} />
         </motion.div>
