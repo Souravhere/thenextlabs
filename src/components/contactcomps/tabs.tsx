@@ -12,7 +12,7 @@ export const Tabs: React.FC<TabsProps> = ({ tabs }) => {
 
   return (
     <div className="w-full">
-      <div className="flex space-x-2 mb-6">
+      <div className="flex space-x-2 mb-6 w-full items-center justify-center">
         {tabs.map((tab, index) => (
           <button
             key={index}
