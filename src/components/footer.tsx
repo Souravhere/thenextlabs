@@ -25,7 +25,7 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { name: 'GitHub', icon: Github, href: 'https://github.com' },
+  { name: 'GitHub', icon: Github, href: 'https://github.com/Souravhere' },
   { 
     name: 'X', 
     icon: () => <span className="text-2xl block font-bold -mt-1">𝕏</span>,
