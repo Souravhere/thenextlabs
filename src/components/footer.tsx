@@ -29,7 +29,7 @@ const socialLinks = [
   { 
     name: 'X', 
     icon: () => <span className="text-2xl block font-bold -mt-1">𝕏</span>,
-    href: 'https://twitter.com' 
+    href: 'https://x.com/thenextlabs_' 
   },
   { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com' },
 ]
