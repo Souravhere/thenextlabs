@@ -78,7 +78,7 @@ export default function CalBooking() {
             whileTap={{ scale: 0.95 }}
           >
             <Link
-              href="https://cal.com/next-labs/strategy-session"
+              href="https://cal.com/the-next-labs/book-a-call"
               className="inline-flex items-center px-8 py-4 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
