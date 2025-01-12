@@ -5,6 +5,7 @@ import { BookCallForm } from "@/src/components/contactcomps/book-call-form"
 import { ContactForm } from "@/src/components/contactcomps/contact-form"
 import { Tabs } from "@/src/components/contactcomps/tabs"
 import { MeshGradient } from "@/src/components/ui/mesh-gradient"
+import { FAQSection } from '@/src/components/faq-section'
 
 
 export default function ContactPage() {
@@ -65,6 +66,7 @@ export default function ContactPage() {
         </motion.div>
 
         <CompetitorComparison />
+        <FAQSection/>
       </div>
     </div>
   )
