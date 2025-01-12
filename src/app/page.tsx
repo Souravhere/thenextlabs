@@ -1,4 +1,5 @@
 
+import CalEmbed from "../components/cal";
 import CalBooking from "../components/cal-booking";
 import CompetitorComparison from "../components/competitor-comparison";
 import { CTA } from "../components/cta";
@@ -23,6 +24,7 @@ export default function Home() {
       <CompetitorComparison/>
       <FAQSection/>
       <CTA/>
+      <CalEmbed/>
       {/* <div className="w-full h-screen"></div> */}
     </div>
   );
