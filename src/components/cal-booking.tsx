@@ -55,7 +55,7 @@ const item = {
 
 export default function CalBooking() {
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section className="py-10 relative overflow-hidden">
       <MeshGradient/>
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -69,11 +69,11 @@ export default function CalBooking() {
             variants={item}
             className="inline-block px-3 py-1 mb-4 text-sm font-semibold text-primary border border-primary/20 rounded-full"
           >
-            CAL.COM
+            SCHEDULE A MEETING
           </motion.div>
           <motion.h2
             variants={item}
-            className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent"
+            className="text-3xl md:text-5xl font-bold mb-4"
           >
             Book a Strategy Session
           </motion.h2>
@@ -94,7 +94,7 @@ export default function CalBooking() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Schedule Now
+              Schedule Now on Cal.com
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
           </motion.div>
