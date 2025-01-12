@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight, Calendar, Video, Users, Clock } from 'lucide-react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { MeshGradient } from './ui/mesh-gradient'
 
@@ -28,16 +27,6 @@ const features = [
     description: 'Automatic confirmations and calendar updates'
   }
 ]
-
-const integrations = [
-  { name: 'Google Meet', logo: '/placeholder.svg?height=40&width=40' },
-  { name: 'Zoom', logo: '/placeholder.svg?height=40&width=40' },
-  { name: 'Microsoft Teams', logo: '/placeholder.svg?height=40&width=40' },
-  { name: 'Slack', logo: '/placeholder.svg?height=40&width=40' },
-  { name: 'Discord', logo: '/placeholder.svg?height=40&width=40' },
-  { name: 'Notion', logo: '/placeholder.svg?height=40&width=40' }
-]
-
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -108,7 +97,7 @@ export default function CalBooking() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
         >
-          {features.map((feature, index) => (
+          {features.map((feature) => (
             <motion.div
               key={feature.title}
               variants={item}
