@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     siteName: "The Next Labs",
     images: [
       {
-        url: "https://thenextlabs.com/meta/socialcard.png", // Using absolute URL
+        url: "https://thenextlabs.com/meta/socialcard.png",
         width: 1200,
         height: 630,
         alt: "The Next Labs | Modern Websites for Your Business",
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
       "Discover The Next Labs: your go-to solution for modern, high-performing websites. Let's build your online success!",
     site: "@thenextlabs_",
     creator: "@thenextlabs_",
-    images: ["https://thenextlabs.com/meta/socialcard.png"], // Using absolute URL
+    images: ["https://thenextlabs.com/meta/socialcard.png"], 
   },
   robots: {
     index: true,
