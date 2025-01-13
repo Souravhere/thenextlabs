@@ -2,6 +2,7 @@
 
 import { FreelancerInfo } from '@/src/components/careerscomps/freelancer-info'
 import { JobCard } from '@/src/components/careerscomps/job-card'
+import Nojobs from '@/src/components/careerscomps/nojobs'
 import { MeshGradient } from '@/src/components/ui/mesh-gradient'
 import { motion } from 'framer-motion'
 
@@ -59,11 +60,12 @@ export default function CareersPage() {
         <div className="space-y-12">
           <FreelancerInfo />
 
-          <div className="space-y-6">
+          <div className="space-y-6 hidden">
             {jobs.map((job, index) => (
               <JobCard key={job.slug} {...job} index={index} />
             ))}
           </div>
+          <Nojobs/>
         </div>
       </div>
     </main>
