@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The Next Labs | The Next Labs for Modern Websites",
+  title: "The Next Labs | For Modern Websites",
   description:
     "The Next Labs specializes in creating modern, responsive, and user-friendly websites tailored to your business needs. Transform your online presence today!",
   generator: "Next.js",
