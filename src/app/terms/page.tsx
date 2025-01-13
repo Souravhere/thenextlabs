@@ -18,7 +18,7 @@ export default function TermsOfServicePage() {
       >
         <section>
           <h2 className="text-2xl font-bold mb-4">Welcome to The Next Labs</h2>
-          <p>By accessing or using our services, you agree to the following Terms of Service. Please read them carefully. If you don't agree, you're welcome to reach out, but you may not use our services.</p>
+          <p>By accessing or using our services, you agree to the following Terms of Service. Please read them carefully. If you don&#39;t agree, you&#39;re welcome to reach out, but you may not use our services.</p>
         </section>
 
         <section>
@@ -75,7 +75,7 @@ export default function TermsOfServicePage() {
         <section>
           <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
           <p>Got questions or concerns? Reach out anytime at contact@thenextlabs.com.</p>
-          <p className="mt-2">We're committed to providing transparent and trustworthy services while keeping things simple and straightforward. Thanks for trusting The Next Labs!</p>
+          <p className="mt-2">We&#39;re committed to providing transparent and trustworthy services while keeping things simple and straightforward. Thanks for trusting The Next Labs!</p>
         </section>
       </motion.div>
     </LegalLayout>
