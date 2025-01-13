@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ReactNode } from 'react'
+import { MeshGradient } from './mesh-gradient'
 
 interface LegalLayoutProps {
   title: string
@@ -12,7 +13,7 @@ interface LegalLayoutProps {
 export function LegalLayout({ title, subtitle, children }: LegalLayoutProps) {
   return (
     <main className="min-h-screen py-20 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-background to-background/50 pointer-events-none" />
+        <MeshGradient/>
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0 }}
