@@ -1,8 +1,8 @@
 'use client'
 
+import { BlogCard } from '@/src/components/blogcomps/blog-card'
+import { FeaturedPost } from '@/src/components/blogcomps/featured-post'
 import { motion } from 'framer-motion'
-import { BlogCard } from '@/components/blog/blog-card'
-import { FeaturedPost } from '@/components/blog/featured-post'
 
 // This would be fetched from Hashnode API in production
 const featuredPost = {
