@@ -1,8 +1,9 @@
 'use client'
 
+import { FreelancerInfo } from '@/src/components/careerscomps/freelancer-info'
+import { JobCard } from '@/src/components/careerscomps/job-card'
 import { motion } from 'framer-motion'
-import { JobCard } from '@/components/careers/job-card'
-import { FreelancerInfo } from '@/components/careers/freelancer-info'
+
 
 const jobs = [
   {
