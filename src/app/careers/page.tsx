@@ -2,6 +2,7 @@
 
 import { FreelancerInfo } from '@/src/components/careerscomps/freelancer-info'
 import { JobCard } from '@/src/components/careerscomps/job-card'
+import { MeshGradient } from '@/src/components/ui/mesh-gradient'
 import { motion } from 'framer-motion'
 
 
@@ -15,29 +16,13 @@ const jobs = [
     skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
     slug: "senior-frontend-developer"
   },
-  {
-    title: "UI/UX Designer",
-    type: "Project-based",
-    location: "Remote",
-    duration: "2-4 months",
-    description: "Seeking a creative UI/UX designer to help design intuitive and beautiful user interfaces for our clients.",
-    skills: ["Figma", "UI Design", "UX Research", "Prototyping"],
-    slug: "ui-ux-designer"
-  },
-  {
-    title: "Full Stack Developer",
-    type: "Project-based",
-    location: "Remote",
-    duration: "4-8 months",
-    description: "Looking for a full stack developer with experience in modern web technologies to build end-to-end solutions.",
-    skills: ["Next.js", "Node.js", "PostgreSQL", "AWS"],
-    slug: "full-stack-developer"
-  }
+  
 ]
 
 export default function CareersPage() {
   return (
-    <main className="min-h-screen py-20">
+    <main className="h-fit py-20 relative">
+        <MeshGradient/>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0 }}
