@@ -20,7 +20,7 @@ export function FreelancerInfo() {
       </p>
       <div className="flex justify-center gap-4">
         <Link
-          href="https://twitter.com/thenextlabs"
+          href="https://twitter.com/thenextlabs_"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
@@ -29,7 +29,7 @@ export function FreelancerInfo() {
           Follow on X
         </Link>
         <Link
-          href="https://linkedin.com/company/thenextlabs"
+          href="https://www.linkedin.com/company/the-next-labs/"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
