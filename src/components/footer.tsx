@@ -12,11 +12,11 @@ const footerLinks = {
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ],
-  Resources: [
-    { name: 'Documentation', href: '/docs' },
-    { name: 'Components', href: '/components' },
-    { name: 'Help Center', href: '/help' },
-    { name: 'Status', href: '/status' },
+  Tools: [
+    { name: 'The Next UI', href: 'https://thenextui.vercel.app/' },
+    { name: 'Veggie Smart', href: 'https://souravhere.github.io/Veggie-Smart/' },
+    { name: 'EZ Module', href: 'https://ez-modules.vercel.app' },
+    { name: 'Face Vibe', href: 'https://facevibe.vercel.app/' },
   ],
   Legal: [
     { name: 'Privacy Policy', href: '/privacy' },
