@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   description:
     "The Next Labs specializes in creating modern, responsive, and user-friendly websites tailored to your business needs. Transform your online presence today!",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-32x32.png",
-    apple: "/apple-touch-icon.png",
+    icon: "/Logos/favicon.ico",
+    shortcut: "/Logos/logo32.png",
+    apple: "/Logos/apple-touch-icon.png",
   },
   openGraph: {
     title: "The Next Labs | The Next Labs for Modern Websites",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "The Next Labs",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/meta/socialcard.png",
         width: 1200,
         height: 630,
         alt: "The Next Labs | Modern Websites for Your Business",
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     title: "The Next Labs | The Next Labs for Modern Websites",
     description:
       "Discover The Next Labs: your go-to solution for modern, high-performing websites. Let's build your online success!",
-    site: "@thenextlabs",
-    creator: "@thenextlabs",
-    images: ["/twitter-card.jpg"],
+    site: "@thenextlabs_",
+    creator: "@thenextlabs_",
+    images: ["/meta/socialcard.png"],
   },
   metadataBase: new URL("https://thenextlabs.com"),
   viewport: "width=device-width, initial-scale=1",
@@ -97,9 +97,9 @@ export default function RootLayout({
                 name: "Sourav Chhimpa",
               },
               sameAs: [
-                "https://www.linkedin.com/company/thenextlabs",
-                "https://twitter.com/thenextlabs",
-                "https://www.facebook.com/thenextlabs",
+                "https://www.linkedin.com/company/the-next-labs/",
+                "https://x.com/thenextlabs_",
+                "https://github.com/Souravhere",
               ],
             }),
           }}
