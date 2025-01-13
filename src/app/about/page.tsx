@@ -12,7 +12,7 @@ import { Lightbulb, Code, Palette, Rocket } from 'lucide-react'
 const founderInfo = {
   name: "Sourav Chhimpa",
   title: "Founder & Lead Developer",
-  image: "/assets/sourav.jpg",
+  image: "/assets/sourav2.png",
   expertise: [
     "Web Designer",
     "3+ years Experience",

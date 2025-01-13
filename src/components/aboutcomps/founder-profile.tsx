@@ -24,14 +24,14 @@ export const FounderProfile = ({
   socialLinks
 }: FounderProfileProps) => {
   return (
-    <div className="grid md:grid-cols-2 gap-12 items-center border p-3 rounded-2xl border-muted/10">
+    <div className="grid md:grid-cols-2 gap-12 items-center border p-3 max-w-5xl mx-auto rounded-2xl border-muted/10 relative">
       {/* Image Section */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="relative aspect-[4/5] md:aspect-auto md:h-[600px] rounded-2xl overflow-hidden bg-gradient-to-br from-muted/10 to-muted/5"
+        className="relative aspect-[2/3] md:aspect-auto md:h-[600px] rounded-2xl overflow-hidden bg-gradient-to-br from-muted/10 to-muted/5"
       >
         <Image
           src={image}
