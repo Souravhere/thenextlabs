@@ -25,7 +25,7 @@ export default function NotFound() {
             <h1 className="text-8xl md:text-9xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">
               404
             </h1>
-            <div className="absolute -inset-x-2 top-1/2 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+            {/* <div className="absolute -inset-x-2 top-1/2 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" /> */}
           </motion.div>
 
           {/* Animated Message */}
