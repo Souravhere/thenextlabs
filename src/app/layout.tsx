@@ -126,6 +126,8 @@ export default function RootLayout({
         <meta name="contact" content="+91 6367477611" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="canonical" href="https://thenextlabs.com" />
+
+        <meta name="google-site-verification" content="jzy0YoEMSnvpu7fiQuc7rgPuQAONCeocshGXkBFz8Hw" />
         
         {/* JSON-LD */}
         <script
