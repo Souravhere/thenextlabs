@@ -135,7 +135,7 @@ export default function RootLayout({
               "@type": "Organization",
               name: "The Next Labs",
               url: "https://thenextlabs.com",
-              logo: "https://thenextlabs.com/logo.png",
+              logo: "https://thenextlabs.com/Logos/thenextlabs.png",
               description:
                 "The Next Labs specializes in creating modern, responsive websites tailored to your business needs.",
               address: {
