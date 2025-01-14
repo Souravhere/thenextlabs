@@ -1,5 +1,4 @@
 import CalEmbed from '@/src/components/cal'
-import CalBooking from '@/src/components/cal-booking'
 import React from 'react'
 
 function Calpage() {
