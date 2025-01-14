@@ -8,7 +8,7 @@ import { GlowingStars } from '../components/ui/glowing-stars'
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-background to-background/50">
+    <div className="min-h-screen w-full flex items-center justify-center relative overflow-hidden">
       {/* Animated background elements */}
       <GlowingStars/>
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-grid" />
