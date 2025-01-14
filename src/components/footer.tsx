@@ -13,7 +13,7 @@ const footerLinks = {
     { name: 'Contact', href: '/contact' },
   ],
   Tools: [
-    { name: 'The Next UI', href: 'https://thenextui.vercel.app/' },
+    { name: 'The Next UI', href: 'https://ui.thenextlabs.com/' },
     { name: 'Veggie Smart', href: 'https://souravhere.github.io/Veggie-Smart/' },
     { name: 'EZ Module', href: 'https://ez-modules.vercel.app' },
     { name: 'Face Vibe', href: 'https://facevibe.vercel.app/' },
