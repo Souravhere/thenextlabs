@@ -2,3 +2,86 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.thenextlabs.com/sitemap.xml
+# The Next Labs Robots.txt
+# Updated: 2024-01-14
+# Main sitemap & additional sitemaps
+Sitemap: https://thenextlabs.com/sitemap.xml
+
+# Global rules
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /projects
+Allow: /contact
+Allow: /careers
+Allow: /privacy
+Allow: /terms
+
+# Disallow crawling of admin, search, and other utility pages
+Disallow: /admin/
+Disallow: /search/
+Disallow: /api/
+Disallow: /cdn-cgi/
+Disallow: /*?*               # Block URLs with query parameters
+Disallow: /*?utm_*          # Block UTM tracking URLs
+Disallow: /*.json$          # Block JSON files
+Disallow: /tmp/
+Disallow: /temp/
+Disallow: /test/
+Disallow: /beta/
+Disallow: /debug/
+
+# Block common image file extensions
+Disallow: /*gif$
+Disallow: /*jpg$
+Disallow: /*jpeg$
+Disallow: /*png$
+Disallow: /*webp$
+Disallow: /*pdf$
+
+# Prevent duplicate content indexing
+Disallow: /*?page=
+Disallow: /*?sort=
+Disallow: /*?filter=
+Disallow: /*?search=
+Disallow: /*?lang=
+
+# Rate limiting for specific bots
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+Allow: /*gif$
+Allow: /*jpg$
+Allow: /*jpeg$
+Allow: /*png$
+Allow: /*webp$
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Block bad bots
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Clean Parameters
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&fbclid&gclid / 
+
+# Host
+Host: https://thenextlabs.com
