@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Footer } from "../components/footer";
 import Navbar from "../components/Navbar";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -101,8 +102,8 @@ export const metadata: Metadata = {
     maximumScale: 5,
   },
   verification: {
-    google: "your-google-site-verification", // Add your Google verification code
-    yandex: "your-yandex-verification", // Add if you use Yandex
+    google: "your-google-site-verification",
+    yandex: "your-yandex-verification",
   },
   category: "technology",
   other: {
@@ -114,26 +115,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="author" content="Sourav Chhimpa" />
         <meta name="email" content="hi@thenextlabs.com" />
         <meta name="contact" content="+91 6367477611" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="canonical" href="https://thenextlabs.com" />
-        {/* <!-- Google Tag Manager --> */}
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-M9WRVF2S');</script>
-{/* <!-- End Google Tag Manager --> */}
-
-        {/* Schema.org JSON-LD */}
+        
+        {/* JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -174,14 +168,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }),
           }}
         />
+        <Script id="google-tag-manager" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-M9WRVF2S');
+          `}
+        </Script>
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#03031D]`}
-      >
-        {/* <!-- Google Tag Manager (noscript) --> */}
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9WRVF2S"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-{/* <!-- End Google Tag Manager (noscript) --> */}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#03031D]`}>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-M9WRVF2S"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <Navbar />
         <main>{children}</main>
         <Footer />
