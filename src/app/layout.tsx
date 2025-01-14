@@ -102,8 +102,7 @@ export const metadata: Metadata = {
     maximumScale: 5,
   },
   verification: {
-    google: "your-google-site-verification",
-    yandex: "your-yandex-verification",
+    google: "jzy0YoEMSnvpu7fiQuc7rgPuQAONCeocshGXkBFz8Hw",
   },
   category: "technology",
   other: {
@@ -122,54 +121,132 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="author" content="Sourav Chhimpa" />
-        <meta name="email" content="hi@thenextlabs.com" />
+        <meta name="email" content="thenextlabs@gmail.com" />
         <meta name="contact" content="+91 6367477611" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="canonical" href="https://thenextlabs.com" />
-
         <meta name="google-site-verification" content="jzy0YoEMSnvpu7fiQuc7rgPuQAONCeocshGXkBFz8Hw" />
         
-        {/* JSON-LD */}
+        {/* Enhanced Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
+              "@type": "WebSite",
               name: "The Next Labs",
               url: "https://thenextlabs.com",
-              logo: "https://thenextlabs.com/Logos/thenextlabs.png",
-              description:
-                "The Next Labs specializes in creating modern, responsive websites tailored to your business needs.",
-              address: {
-                "@type": "PostalAddress",
-                addressCountry: "IN"
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://thenextlabs.com/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
               },
-              contactPoint: {
-                "@type": "ContactPoint",
-                telephone: "+91 6367477611",
-                email: "hi@thenextlabs.com",
-                contactType: "Customer Support",
+              mainEntity: {
+                "@type": "Organization",
+                name: "The Next Labs",
+                url: "https://thenextlabs.com",
+                logo: "https://thenextlabs.com/Logos/thenextlabs.png",
+                description: "The Next Labs specializes in creating modern, responsive websites tailored to your business needs.",
+                address: {
+                  "@type": "PostalAddress",
+                  addressCountry: "IN"
+                },
+                contactPoint: {
+                  "@type": "ContactPoint",
+                  telephone: "+91 6367477611",
+                  email: "thenextlabs@gmail.com",
+                  contactType: "Customer Support"
+                },
+                founder: {
+                  "@type": "Person",
+                  name: "Sourav Chhimpa",
+                  jobTitle: "Founder",
+                  url: "https://thenextlabs.com"
+                },
+                sameAs: [
+                  "https://www.linkedin.com/company/the-next-labs/",
+                  "https://x.com/thenextlabs_",
+                  "https://github.com/Souravhere"
+                ],
+                aggregateRating: {
+                  "@type": "AggregateRating",
+                  ratingValue: "4.9",
+                  reviewCount: "50"
+                },
+                hasOfferCatalog: {
+                  "@type": "OfferCatalog",
+                  name: "Web Development Services",
+                  itemListElement: [
+                    {
+                      "@type": "Service",
+                      name: "Website Development",
+                      url: "https://thenextlabs.com/services",
+                      description: "Custom website development services for modern businesses"
+                    },
+                    {
+                      "@type": "Service",
+                      name: "Web Design",
+                      url: "https://thenextlabs.com/services",
+                      description: "Professional web design services"
+                    }
+                  ]
+                }
               },
-              founder: {
-                "@type": "Person",
-                name: "Sourav Chhimpa",
-                jobTitle: "Founder",
-                url: "https://thenextlabs.com"
-              },
-              sameAs: [
-                "https://www.linkedin.com/company/the-next-labs/",
-                "https://x.com/thenextlabs_",
-                "https://github.com/Souravhere",
-              ],
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: "4.9",
-                reviewCount: "50"
-              }
+              subjectOf: [
+                {
+                  "@type": "WebPage",
+                  name: "About The Next Labs",
+                  description: "Learn about The Next Labs and our mission",
+                  url: "https://thenextlabs.com/about",
+                  lastReviewed: "2024-01-14"
+                },
+                {
+                  "@type": "WebPage",
+                  name: "Our Services",
+                  description: "Explore our web development and design services",
+                  url: "https://thenextlabs.com/services",
+                  lastReviewed: "2024-01-14"
+                },
+                {
+                  "@type": "WebPage",
+                  name: "Projects Portfolio",
+                  description: "View our latest web development projects",
+                  url: "https://thenextlabs.com/projects",
+                  lastReviewed: "2024-01-14"
+                },
+                {
+                  "@type": "ContactPage",
+                  name: "Contact Us",
+                  description: "Get in touch with The Next Labs",
+                  url: "https://thenextlabs.com/contact",
+                  lastReviewed: "2024-01-14"
+                },
+                {
+                  "@type": "WebPage",
+                  name: "Careers",
+                  description: "Join our team at The Next Labs",
+                  url: "https://thenextlabs.com/careers",
+                  lastReviewed: "2024-01-14"
+                },
+                {
+                  "@type": "WebPage",
+                  name: "Privacy Policy",
+                  description: "Our privacy policy",
+                  url: "https://thenextlabs.com/privacy",
+                  lastReviewed: "2024-01-14"
+                },
+                {
+                  "@type": "WebPage",
+                  name: "Terms of Service",
+                  description: "Our terms of service",
+                  url: "https://thenextlabs.com/terms",
+                  lastReviewed: "2024-01-14"
+                }
+              ]
             }),
           }}
         />
+
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
