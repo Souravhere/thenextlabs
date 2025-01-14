@@ -39,7 +39,7 @@ export default function NotFound() {
               Oops! Page not found
             </h2>
             <p className="text-muted-foreground">
-              It seems you've ventured into uncharted territory. The page you're looking for has either moved or doesn't exist.
+              It seems you&#39;ve ventured into uncharted territory. The page you&#39;re looking for has either moved or doesn&#39;t exist.
             </p>
           </motion.div>
 
