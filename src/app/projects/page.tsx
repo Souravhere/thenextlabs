@@ -16,7 +16,7 @@ const projects = [
     image: "/projects/yellow-labs.png",
     tags: ["Next.js", "TailwindCSS", "Framer Motion", "Figma"],
     category: "Agency",
-    link: "https://yellowlabs.vercel.app/"
+    link: "https://www.yellow-labs.net"
   },
   {
     title: "Space Things",
