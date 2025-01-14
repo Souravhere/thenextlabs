@@ -49,13 +49,13 @@ export const metadata: Metadata = {
     other: [
       {
         rel: "mask-icon",
-        url: "/Logos/safari-pinned-tab.svg",
+        url: "/Logos/thenextlabs.svg",
         color: "#03031D",
       },
     ],
   },
   openGraph: {
-    title: "The Next Labs | The Next Labs for Modern Websites",
+    title: "The Next Labs | For Modern Websites",
     description:
       "Elevate your digital presence with The Next Labs. We build websites that are fast, sleek, and optimized for growth.",
     url: "https://thenextlabs.com",
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Next Labs | The Next Labs for Modern Websites",
+    title: "The Next Labs | For Modern Websites",
     description:
       "Discover The Next Labs: your go-to solution for modern, high-performing websites. Let's build your online success!",
     site: "@thenextlabs_",
