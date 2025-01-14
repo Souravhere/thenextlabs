@@ -3,13 +3,14 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Home, ArrowLeft } from 'lucide-react'
-import { GlowingStars } from './glowing-stars'
+import { GlowingStars } from '../components/ui/glowing-stars'
+
 
 export default function NotFound() {
   return (
     <div className="min-h-screen w-full flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-background to-background/50">
       {/* Animated background elements */}
-      <GlowingStars />
+      <GlowingStars/>
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-grid" />
       
       <div className="container px-4 md:px-6 relative z-10">
