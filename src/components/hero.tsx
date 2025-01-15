@@ -7,7 +7,7 @@ import { AnimatedButton } from './ui/animated-button'
 
 export const Hero = () => {
   return (
-    <div className="relative min-h-screen sm:py-20 py-8 flex flex-col items-center justify-center overflow-hidden">
+    <div className="relative min-h-screen sm:py-28 py-8 flex flex-col items-center justify-center overflow-hidden">
         <MeshGradient />
         {/* Main Content */}
       <div className="container w-full mx-auto text-center relative">
