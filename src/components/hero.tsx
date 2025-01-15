@@ -98,9 +98,9 @@ export const Hero = () => {
           {/* CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: -20 }}
             transition={{ delay: 1.1, duration: 0.8 }}
-            className="flex flex-wrap gap-6 justify-center px-2"
+            className="flex flex-wrap justify-center"
           >
             <AnimatedButton href="/contact" variant="primary" className='h-16 w-58 flex items-center justify-center text-xl'>
                Book a Call <ArrowUpRight className="w-8 h-8" />
